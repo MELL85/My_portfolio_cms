@@ -1,0 +1,131 @@
+@import '../../variables.scss';
+
+.App-header {
+    margin: -1px 0 0;
+    padding: 59px 0 0;
+    background-color: #fff;
+    color: $text-color;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: center;
+
+    background: url(../../assets/img/bg.png);
+    background-position: 35% 45%;
+    background-size: cover;
+
+    @media screen and (min-width: 1300px) {
+        justify-content: flex-start;
+    }
+
+}
+
+.menu {
+    display: none;
+
+    @media screen and (min-width: 1300px) {
+        display: block;
+    }
+
+    &__head-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.header {
+    &__banner {
+        padding: 16px 16px 160px;
+        width: 80%;
+
+        @media screen and (min-width: 992px) {
+            padding-bottom: 40px;
+        }
+
+        @media screen and (min-width: 1300px) {
+            padding: 40px;
+        }
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 40px;
+        background: $secondary-main-color-gradient;
+        opacity: .8;
+        border-radius: 20px;
+
+        @media screen and (min-width: 992px) {
+            justify-content: start;
+            text-align: left;
+            align-items: start;
+            max-width: 800px;
+        }
+    }
+
+    &__text-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 8px;
+
+        // background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(238, 130, 238, 1) 100%);
+        background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(245, 207, 2, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media screen and (min-width: 600px) {
+            font-size: 32px;
+        }
+
+        @media screen and (min-width: 1300px) {
+            font-size: 36px;
+        }
+    }
+
+    &__text-head-title {
+        font-size: 28px;
+
+        // background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(238, 130, 238, 1) 100%);
+        background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(245, 207, 2, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media screen and (min-width: 600px) {
+            font-size: 38px;
+        }
+
+        @media screen and (min-width: 1300px) {
+            font-size: 48px;
+        }
+    }
+}
+
+.header__desctop-block {
+    display: none;
+
+    @media screen and (min-width: 992px) {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0;
+    }
+}
+
+.header__desctop-head-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.header__desctop-icon-cv-block {
+    display: flex;
+    align-items: center;
+}

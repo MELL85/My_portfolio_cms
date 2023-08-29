@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.socialIcons {
+    &__block {
+        padding: 32px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        margin: 8px 16px;
+    }
+
+    &__icon svg {
+        font-size: 24px;
+        color: $text-color;
+    }
+
+    &__telegram svg:hover {
+        color: $telegram-icon;
+        font-size: 26px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__linkedin svg:hover {
+        color: $linkedin-icon;
+        font-size: 26px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__whatsapp svg:hover {
+        color: $whatsapp-icon;
+        font-size: 26px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__instagarm svg:hover {
+        color: $instagram-icon;
+        font-size: 26px;
+        transition: all .3s ease-in-out;
+    }
+
+    &__mail svg:hover {
+        color: $secondary-main-color;
+        font-size: 26px;
+        transition: all .3s ease-in-out;
+    }
+
+}
