@@ -1,0 +1,162 @@
+@import './variables.scss';
+
+/* .app {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
+  position: relative;
+  .bg-decoration {
+      position: absolute;
+      right: -174px;
+      bottom: -70px;
+      z-index: -1;
+  }
+} */
+
+main {
+    /* margin-top: 50px; */
+    position: relative;
+    // background: $main-color-bg;
+    /* background: $main-color-bg-gradient; */
+    /* background: $test-bg-gradient-2; */
+    /* background: $test-bg-gradient; */
+    /* background: $test-bg-gradient-3; */
+}
+
+.container {
+    margin-inline: 8px;
+
+    width: 100%;
+    min-height: 100vh;
+
+    /* margin: 0 auto; */
+    /* max-width: 1280px; */
+}
+
+.app__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// .app__navigation {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+  
+//     padding: 1rem;
+  
+//     .app__navigation-dot {
+//       width: 10px;
+//       height: 10px;
+//       border-radius: 50%;
+//       background-color: #cbcbcb;
+//       margin: 0.5rem;
+  
+//       transition: background-color 0.2s ease-in-out;
+  
+//       &:hover {
+//         background-color: var(--secondary-color);
+//       }
+  
+//       @media screen and (min-width: 2000px) {
+//         width: 20px;
+//         height: 20px;
+//       }
+//     }
+//   }
+  
+//   @media screen and (max-width: 500px) {
+//     .app__navigation,
+//     .app__social {
+//       display: none;
+//     }
+  
+//     .copyright {
+//       padding: 2rem;
+//     }
+//   }
+
+
+
+.gradient__bg {
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(11, 21, 45, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 3% 25%, rgba(11, 21, 45, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 3% 25%, rgba(11, 21, 45, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 3% 25%, rgba(11, 21, 45, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 3% 25%, rgba(11, 21, 45, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+.gradient__text {
+    background: $main-color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+    padding: 4rem 2rem;
+}
+
+.section__margin {
+    margin: 4rem 2rem;
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center {
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .section__padding {
+        padding: 4rem;
+    }
+
+    .section__margin {
+        margin: 4rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .section__padding {
+        padding: 4rem 6rem;
+    }
+
+    .section__margin {
+        margin: 4rem 6rem;
+    }
+}
