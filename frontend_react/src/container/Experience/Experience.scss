@@ -1,0 +1,97 @@
+@import '../../variables.scss';
+
+
+.App-experience {
+    // background-color: $main-color-bg;
+    padding: 40px 0 0;
+    // margin: -1px 0 0;
+
+    @media screen and (min-width: 992px) {
+        margin: 120px 0 0;
+        padding: 40px 16px 0;
+    }
+}
+
+.experience__block {
+    display: flex;
+    flex-direction: column;
+
+    // @media screen and (min-width: 992px) {
+    //     // grid-template-columns: repeat(2, 1fr);
+    //     grid-template-columns: repeat(3, 1fr);
+    //     // grid-template-rows: repeat(2);
+    // }
+}
+
+.experience__block-up {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+    }
+}
+
+.experience__empty-block {
+    display: none;
+
+    @media screen and (min-width: 1300px) {
+        display: block;
+        max-width: 17%;
+        position: relative;
+        border-right: 1px solid $main-color ;
+    }
+}
+
+.experience__empty-text {
+    @media screen and (min-width: 1300px) {
+        position: relative;
+        top: 250px;
+        left: 80px;
+        color: $text-color;
+        font-size: 45px;
+        text-transform: uppercase;
+        transform: rotate(270deg);
+        opacity: .4;
+
+        span {
+            opacity: .3;
+        }
+    }
+}
+
+.experience__block-item-list {
+    @media screen and (min-width:992px) {
+        // grid-column-start: 1;
+        // grid-column-end: 2;
+        // grid-row-start: 1;
+        display: flex;
+        flex: .6;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+.experience__block-progress-list {
+    @media screen and (min-width:992px) {
+        // grid-column-start: 2;
+        // grid-row-start: 1;
+        display: flex;
+        flex: .8;
+        flex-direction: column;
+        max-width: 100%;
+    }
+}
+
+.experience__block-counter-list {
+    @media screen and (min-width:992px) {
+        max-width: 100%;
+        flex: 1;
+        // grid-column-start: 1;
+        // grid-column-end: 3;
+        // grid-row-start: 2;
+        // max-width: 900px;
+    }
+}

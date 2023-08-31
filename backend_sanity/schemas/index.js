@@ -4,16 +4,14 @@ import experiences from './experiences';
 import services from './services';
 import skills from './skills';
 import testimonials from './testimonials';
-import workExperiences from './workExperiences';
+import workExperinces from './workExperiences';
 import works from './works';
 
-export const schemaTypes = [
-    abouts,
+export const schemaTypes = [abouts,
     contact,
     experiences,
     services,
     skills,
     testimonials,
-    workExperiences,
-    works
-]
+    workExperinces,
+    works]

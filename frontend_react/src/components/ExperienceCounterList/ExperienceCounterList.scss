@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.counter {
+    padding: 0 16px;
+
+    // &__item-block {
+    //     padding: 40px 0;
+    // }
+    &__item-block {
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        background: $secondary-main-color-gradient;
+        padding: 20px 0 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media screen and (min-width: 992px) {
+            flex-wrap: nowrap;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}

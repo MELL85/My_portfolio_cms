@@ -16,10 +16,8 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba($color: #0b152d, $alpha: .7);
-    // position: fixed;
     z-index: 2;
     position: relative;
-    // overflow: hidden;
 
     color: $secondary-main-color;
 }

@@ -16,8 +16,9 @@
 main {
     /* margin-top: 50px; */
     position: relative;
+     background: $main-color-bg-gradient;
+
     // background: $main-color-bg;
-    /* background: $main-color-bg-gradient; */
     /* background: $test-bg-gradient-2; */
     /* background: $test-bg-gradient; */
     /* background: $test-bg-gradient-3; */
@@ -39,50 +40,68 @@ main {
     }
 }
 
-.app__flex {
+.app__container {
+    width: 100%;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .app__flex {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
+  
+  .app__wrapper {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 4rem 2rem;
+  
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem 2rem;
+    }
+  }
 
-// .app__navigation {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     flex-direction: column;
+.app__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-//     padding: 1rem;
+    padding: 1rem;
 
-//     .app__navigation-dot {
-//       width: 10px;
-//       height: 10px;
-//       border-radius: 50%;
-//       background-color: #cbcbcb;
-//       margin: 0.5rem;
+    .app__navigation-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #cbcbcb;
+      margin: 0.5rem;
 
-//       transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
 
-//       &:hover {
-//         background-color: var(--secondary-color);
-//       }
+      &:hover {
+        background-color: var(--secondary-color);
+      }
 
-//       @media screen and (min-width: 2000px) {
-//         width: 20px;
-//         height: 20px;
-//       }
-//     }
-//   }
+      @media screen and (min-width: 2000px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
 
-//   @media screen and (max-width: 500px) {
-//     .app__navigation,
-//     .app__social {
-//       display: none;
-//     }
+  @media screen and (max-width: 500px) {
+    .app__navigation,
+    .app__social {
+      display: none;
+    }
 
-//     .copyright {
-//       padding: 2rem;
-//     }
-//   }
+    // .copyright {
+    //   padding: 2rem;
+    // }
+  }
 
 
 

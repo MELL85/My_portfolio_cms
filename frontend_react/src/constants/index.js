@@ -1,2 +1,2 @@
 export { default as images } from './images';
-// export { default as dataList } from './dataList';
+export { default as dataList } from './dataList';

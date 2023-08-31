@@ -12,17 +12,14 @@ function App() {
       <div className="App-navbar">
         <Navbar />
       </div>
-      <header className="App-header">
+      <header className="App-header" id="home">
         <Header />
       </header>
       <main>
-        {/* <section className='App-greeting'>
-            
-          </section> */}
         <section className='App-about-me'>
           <About />
         </section>
-        <section className='App-experience'>
+        <section className='App-experience' id="experience">
           <Experience />
         </section>
         <section className='App-serv'>

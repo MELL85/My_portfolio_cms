@@ -26,6 +26,7 @@
 
     @media screen and (min-width: 1300px) {
         display: block;
+        padding: 40px 0 0 0;
     }
 
     &__head-block {
@@ -60,6 +61,7 @@
         background: $secondary-main-color-gradient;
         opacity: .8;
         border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 
         @media screen and (min-width: 992px) {
             justify-content: start;
