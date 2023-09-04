@@ -30,6 +30,6 @@ export default {
             name: 'location',
             title: 'Testimonial Location',
             type: 'geopoint',
-        }
+        },
     ]
 }

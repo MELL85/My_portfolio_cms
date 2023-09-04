@@ -9,6 +9,8 @@
 
 .testimonials__main-block {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
 }
 
@@ -23,8 +25,10 @@
     }
 }
 
-
 .testimonials__head-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: $secondary-main-color-gradient;
     border-radius: 20px;
     padding: 40px 15px;
@@ -49,42 +53,76 @@
 
 .testimonials__carousel-block {
     margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.testimonials__card-item-block {
+.testimonial__carousel-item {
     background-color: $services-item-bg;
+    width: 270px;
+    height: 270px;
     padding: 24px;
     margin: 8px 0 16px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: start;
+    justify-content: center;
+    text-align: center;
+
+    transition: all .3s ease-in-out;
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 
-.testimonials__card-item-text {
-    margin: 0 0 16px;
-    line-height: 24px;
-    letter-spacing: .5px;
+.testimonial__carousel-content {
+
+    p {
+        line-height: 24px;
+        letter-spacing: .5px;
+        margin: 16px 0;
+    }
 }
 
-.testimonials__card-img-block {
+.testimonials__carousel-title {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 8px 0 0;
-}
-
-.testimonials__card-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.testimonials__card-img-text {
-    margin: 0 0 0 8px;
+    justify-content: center;
     font-size: 12px;
 }
+
+.testimonials__btns {
+    flex-direction: row;
+
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $text-color;
+        margin: 1rem;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            color: $main-color-bg;
+        }
+
+        &:hover {
+            background: $main-color-bg;
+    
+            svg {
+                color: $text-color;
+            }
+        }
+    }
+}
+
 
 .testimonials__open-btn-block {
     @media screen and (min-width: 992px) {
@@ -138,11 +176,11 @@
     border-radius: 5px;
     border: 2px solid $secondary-main-color;
     color: $secondary-main-color;
-    box-shadow: 5px 5px 10px $main-color-bg;
+    transition: all .3s ease;
 
     &:hover {
         color: $main-color-bg;
-        padding: 6px 38px;
-        transition: all .3s ease;
+        box-shadow: 5px 5px 10px $main-color-bg;
+        transform: scale(1.05);
     }
 }
