@@ -1,0 +1,148 @@
+@import '../../variables.scss';
+
+.App-testimonials {
+    // background-color: $main-color-bg;
+    padding: 40px 16px 40px;
+    color: $text-color;
+    margin: -1px 0 0;
+}
+
+.testimonials__main-block {
+    display: flex;
+    width: 90%;
+}
+
+.testimonials__map-block {
+    flex: 1;
+    display: flex;
+    display: none;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.testimonials__head-block {
+    background: $secondary-main-color-gradient;
+    border-radius: 20px;
+    padding: 40px 15px;
+    text-align: center;
+    border: .5px solid rgba($color: $accent-color, $alpha: .5);
+}
+
+.testimonials__head-title-block {
+    padding: 16px 0;
+    margin: 0 0 24px;
+}
+
+.testimonials__head-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: $text-color;
+
+    @media screen and (min-width: 992px) {
+        font-size: 32px;
+    }
+}
+
+.testimonials__carousel-block {
+    margin: 0 0 24px;
+}
+
+.testimonials__card-item-block {
+    background-color: $services-item-bg;
+    padding: 24px;
+    margin: 8px 0 16px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+.testimonials__card-item-text {
+    margin: 0 0 16px;
+    line-height: 24px;
+    letter-spacing: .5px;
+}
+
+.testimonials__card-img-block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 0 0;
+}
+
+.testimonials__card-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.testimonials__card-img-text {
+    margin: 0 0 0 8px;
+    font-size: 12px;
+}
+
+.testimonials__open-btn-block {
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+}
+
+
+.testimonials__main-block {
+    @media screen and (min-width: 992px) {
+        display: flex;
+    }
+}
+
+.appeal {
+    padding: 0 16px;
+
+    @media screen and (min-width: 992px) {
+        max-width: 30%;
+    }
+}
+
+.appeal__title {
+    margin: 0 0 24px;
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    // color: $main-color;
+    background-image: $main-color-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @media screen and (min-width: 992px) {
+        font-size: 32px;
+    }
+}
+
+.appeal__text {
+    margin: 0 0 24px;
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+
+.contact-me__btn {
+    padding: 5px 36px;
+    font-size: 18px;
+    background: $main-color-gradient;
+    border-radius: 5px;
+    border: 2px solid $secondary-main-color;
+    color: $secondary-main-color;
+    box-shadow: 5px 5px 10px $main-color-bg;
+
+    &:hover {
+        color: $main-color-bg;
+        padding: 6px 38px;
+        transition: all .3s ease;
+    }
+}

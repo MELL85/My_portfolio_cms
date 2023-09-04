@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import { AppWrap } from '../../wrapper';
 import { NavbarLeft, SocialIcons } from '../../components';
 import './Header.scss';
 
@@ -42,4 +41,4 @@ const Header = () => {
   )
 }
 
-export default AppWrap(Header, 'home');
+export default Header;

@@ -1,0 +1,195 @@
+@import '../../variables.scss';
+
+.App-work {
+    // background-color: $main-color-bg;
+    padding: 40px 0 40px;
+    // margin: -1px 0 0;
+    // position: relative;
+    // z-index: 30;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.work__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work {
+    &__head-title-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @media screen and (min-width: 992px) {
+            margin: 0 0 24px;
+        }
+    }
+
+    &__head-title {
+        font-size: 24px;
+        font-weight: 200;
+        letter-spacing: 1px;
+        color: $main-color;
+        // color: $text-color;
+
+        strong {
+            opacity: .5;
+        }
+
+        @media screen and (min-width: 992px) {
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+}
+
+.work__filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    color: $text-color;
+
+    margin: 4rem 0 2rem;
+
+    .work__filter-item {
+        padding: 0.5rem 1rem;
+        border-radius: .5rem;
+        background: $secondary-main-color-gradient;
+        color: $text-color;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        margin: 0.5rem;
+
+        &:hover {
+            background: $main-color-gradient;
+            color: $main-color-bg;
+        }
+
+        @media screen and (min-width: 2000px) {
+            padding: 1rem 2rem;
+            border-radius: 0.85rem;
+        }
+    }
+
+    .item-active {
+        background: $main-color-gradient;
+        color: $main-color-bg;
+    }
+}
+
+.work__portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .work__item {
+        width: 270px;
+        flex-direction: column;
+
+        margin: 2rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background: $text-color;
+
+        cursor: pointer;
+        transition: all .3s ease;
+
+        &:hover {
+            box-shadow: 0 0 25px rgba($color: #f5cf02, $alpha: 0.2);
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 470px;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+        }
+
+        // @media screen and (max-width: 300px) {
+        //     width: 100%;
+        //     margin: 1rem;
+        // }
+    }
+}
+
+.work__img {
+    width: 100%;
+    height: 230px;
+
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        object-fit: cover;
+    }
+
+    @media screen and (min-width: 2000px) {
+        height: 350px;
+    }
+}
+
+.work__hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+
+    border-radius: .5rem;
+    opacity: 0;
+    transition: all .3s ease;
+
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba($color: #000000, $alpha: 0.5);
+        color: $text-color;
+        margin: 1rem;
+        font-weight: 800;
+        cursor: pointer;
+        transition: all .3s ease;
+
+        svg {
+            width: 50%;
+            height: 50%;
+            color: $text-color;
+        }
+    }
+}
+
+.work__content {
+    padding: 0.5rem;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h4 {
+        margin: 1rem 0 0;
+        line-height: 1.5;
+    }
+
+    .work__tag {
+        position: absolute;
+        padding: 0.5rem;
+        border-radius: 10px;
+        background: $text-color;
+        top: -25px;
+    }
+}

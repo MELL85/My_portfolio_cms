@@ -26,5 +26,10 @@ export default {
             title: 'Feedback',
             type: 'string'
         },
+        {
+            name: 'location',
+            title: 'Testimonial Location',
+            type: 'geopoint',
+        }
     ]
 }

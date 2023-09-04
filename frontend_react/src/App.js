@@ -22,17 +22,17 @@ function App() {
         <section className='App-experience' id="experience">
           <Experience />
         </section>
-        <section className='App-serv'>
+        <section className='App-serv' id="services">
           <ServSection />
         </section>
-        <section className='App-work'>
+        <section className='App-work' id="work">
           <Work />
         </section>
-        <section className='App-testimonials'>
+        <section className='App-testimonials' id="testimonials">
           <Testimonials />
         </section>
       </main>
-      <footer className="App-footer">
+      <footer className="App-footer" id="contact">
         <Footer />
       </footer>
     </div>

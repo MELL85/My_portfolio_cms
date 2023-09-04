@@ -4,14 +4,6 @@ export default {
     type: 'document',
     fields: [
         {
-            name: 'imgUrl',
-            title: 'ImgUrl',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
-        {
             name: 'title',
             title: 'Title',
             type: 'string',
@@ -21,6 +13,13 @@ export default {
             title: 'Description',
             type: 'string',
         },
-
+        {
+            name: 'imgUrl',
+            title: 'ImgUrl',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        },
     ]
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Tooltip } from 'react-tooltip';
 
 import { client } from '../../client';
 
@@ -7,35 +8,65 @@ import './ExperienceItemList.scss';
 
 const ExperienceItemList = () => {
 
-    const [workExperiences, setWorkExperiences] = useState([]);
+    const [experience, setExperience] = useState([]);
 
     useEffect(() => {
-        const query = '*[_type == "workExperience"]';
+        const query = '*[_type == "experiences"]';
 
         client.fetch(query)
-            .then((data) => setWorkExperiences(data))
+            .then((data) => setExperience(data))
     }, [])
 
     return (
         <div className="experience__list-block">
             <h5 className="experience__title">WORK EXPERIENCE</h5>
             <ul className="experience__list">
-                {workExperiences.map((workExperience, index) => (
-                    <motion.div
-                        whileInView={{ x: [-200, 0], opacity: [0, 1] }}
-                        transition={{ duration: 1, ease: 'easeInOut' }}
-                        key={workExperience.title + index} >
-                        <li className="experience__list-item">
-                            <div className="experience__list-item-block">
-                                <h5 className="experience__list-item-head-title">{workExperience.name}</h5>
-                                <p className="experience__list-item-title">{workExperience.company} <span>{workExperience.desc}</span></p>
+                <motion.div>
+                    {experience.map((experience) => (
+                        <motion.div
+                            className="experience__item"
+                            key={experience.year}
+                        >
+                            <div className="experience__year">
+                                <p>{experience.year}</p>
                             </div>
-                        </li>
-                    </motion.div>
-                ))}
+
+                            <motion.div className="experience__works">
+                                {experience.works.map((work) => (
+                                    <>
+                                        <motion.div
+                                            whileInView={{ opacity: [0, 1] }}
+                                            transition={{ duration: 0.5 }}
+                                            className="experience__list-item-work"
+                                            data-tip
+                                            data-for={work.name}
+                                            key={work.name}
+                                        >
+                                            <li className="experience__list-item">
+                                                <div className="experience__list-item-block">
+                                                    <h5 className="experience__list-item-head-title">{work.name}</h5>
+                                                    <p className="experience__list-item-title">{work.company}</p>
+                                                </div>
+                                            </li>
+                                        </motion.div>
+
+                                        <Tooltip
+                                            id={work.name}
+                                            effect="solid"
+                                            arrowColor="#fff"
+                                            className="experience-tooltip"
+                                        >
+                                            {work.desc}
+                                        </Tooltip>
+                                    </>
+                                ))}
+                            </motion.div>
+                        </motion.div>
+                    ))}
+                </motion.div>
             </ul>
         </div>
     )
 }
 
-export default ExperienceItemList
+export default ExperienceItemList;

@@ -1,13 +1,14 @@
 import React from 'react';
-import { NavigationDots } from '../components';
+import { NavigationDots, SocialMedia } from '../components';
 
 const AppWrap = (Component, idName, classNames) => function HOC() {
   return (
     <div id={idName} className={`app__container ${classNames}`}>
-        <div className="app_wrapper app__flex">
-            <Component/>
-        </div>
-        <NavigationDots active={idName} />
+      <SocialMedia />
+      <div className="app_wrapper app__flex">
+        <Component />
+      </div>
+      <NavigationDots active={idName} />
     </div>
   )
 }

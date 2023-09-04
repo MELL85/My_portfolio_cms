@@ -16,7 +16,7 @@
 main {
     /* margin-top: 50px; */
     position: relative;
-     background: $main-color-bg-gradient;
+    background: $main-color-bg-gradient;
 
     // background: $main-color-bg;
     /* background: $test-bg-gradient-2; */
@@ -42,27 +42,79 @@ main {
 
 .app__container {
     width: 100%;
-  
+
     display: flex;
     justify-content: space-between;
-  }
-  
-  .app__flex {
+}
+
+.app__flex {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .app__wrapper {
+}
+
+.app__wrapper {
     flex: 1;
     width: 100%;
     flex-direction: column;
     padding: 4rem 2rem;
-  
+
     @media screen and (max-width: 450px) {
-      padding: 4rem 1rem 2rem;
+        padding: 4rem 1rem 2rem;
     }
-  }
+}
+
+.app__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 1rem;
+    visibility: hidden;
+
+    div {
+        // width: 40px;
+        // height: 40px;
+        border-radius: 50%;
+        background: $main-color-bg;
+        margin: 0.25rem 0;
+        border: 1px solid $text-color;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s ease-in-out;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            color: $text-color;
+        }
+
+        &:hover {
+            background: $secondary-main-color-gradient;
+            border-color: $secondary-main-color-gradient;
+
+            svg {
+                color: $main-color;
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 70px;
+            height: 70px;
+
+            margin: 0.5rem 0;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
 
 .app__navigation {
     display: flex;
@@ -73,35 +125,36 @@ main {
     padding: 1rem;
 
     .app__navigation-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #cbcbcb;
-      margin: 0.5rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #cbcbcb;
+        margin: 0.5rem;
 
-      transition: background-color 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out;
 
-      &:hover {
-        background-color: var(--secondary-color);
-      }
+        &:hover {
+            background-color: var(--secondary-color);
+        }
 
-      @media screen and (min-width: 2000px) {
-        width: 20px;
-        height: 20px;
-      }
+        @media screen and (min-width: 2000px) {
+            width: 20px;
+            height: 20px;
+        }
     }
-  }
+}
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
+
     .app__navigation,
     .app__social {
-      display: none;
+        display: none;
     }
 
     // .copyright {
     //   padding: 2rem;
     // }
-  }
+}
 
 
 

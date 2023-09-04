@@ -16,6 +16,7 @@ import tailwind from '../assets/img/tailwind.png';
 import threejs from '../assets/img/threejs.png';
 import bg from '../assets/img/bg.png';
 import myFoto from '../assets/img/myFoto.jpg';
+import worldMap from '../assets/img/worldMap.svg';
 
 export default {
     bootstrap,
@@ -35,5 +36,6 @@ export default {
     tailwind,
     threejs,
     bg,
-    myFoto
+    myFoto,
+    worldMap
 };
