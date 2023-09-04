@@ -1,87 +1,98 @@
 @import '../../variables.scss';
 
-.nav {
-    &__detail {
-        margin: 40px 0 0;
-        padding: 0 16px 0;
+.nav__detail {
+    margin: 40px 0 0;
+    padding: 0 16px 0;
 
-        @media screen and (min-width: 600px) {
-            margin: 0;
-        }
+    @media screen and (min-width: 600px) {
+        margin: 0;
     }
- 
-    &__logo-name {
+}
+
+.nav__logo-name {
+    font-size: 28px;
+    color: $text-color;
+    letter-spacing: 2px;
+
+    span {
         font-size: 28px;
         color: $text-color;
-        letter-spacing: 1px;
-
-        @media screen and (min-width: 992px) {
-         font-size: 38px;
-        }
+        letter-spacing: 2px;
+        opacity: .5;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
     }
 
-    &__logo-descr {
-        font-size: 18px;
-        font-weight: 400;
-        color: $text-color;
-        letter-spacing: 1px;
-
-        @media screen and (min-width: 992px) {
-         font-size: 24px;
-        }
+    @media screen and (min-width: 992px) {
+        font-size: 38px;
     }
+}
 
-    &__cv-link {
-        color: $main-color;
-        font-weight: 700;
-        margin: 16px 0;
-        padding: 7px 26px;
-        border-radius: 5px;
-        background: $secondary-main-color-gradient;
-        color: $main-color;
-        border: $secondary-main-color;
-        letter-spacing: 1px;
-        &:hover {
-            color: $main-color-bg;
-            box-shadow: 3px 3px 8px 1px $main-color;
-            padding: 9px 28px;
-            transition: all .3s ease;
-        }
-    }
+.nav__logo-descr {
+    font-size: 18px;
+    font-weight: 400;
+    color: $text-color;
+    letter-spacing: 1px;
 
-    &__social {
-        margin: 24px 0;
-    }
 
-    &__icon {
-        margin: 8px;
-    }
-    &__icon svg {
+    @media screen and (min-width: 992px) {
         font-size: 24px;
     }
-    &__telegram svg {
-        color: $telegram-icon;
-    }
-    &__whatsapp svg {
-        color: $whatsapp-icon;
-    }
-    &__linkedin svg {
-        color: $linkedin-icon;
-    }
-    &__instagram svg {
-        color: $instagram-icon;
-    }
-    &__mail svg {
-        color: $secondary-main-color;
-    }
+}
 
-    &__contact-item {
-        line-height: 24px;
+.nav__cv-link {
+    color: $main-color;
+    font-weight: 700;
+    margin: 16px 0;
+    padding: 7px 26px;
+    border-radius: 5px;
+    background: $secondary-main-color-gradient;
+    color: $main-color;
+    border: $secondary-main-color;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+
+    &:hover {
+        color: $main-color-bg;
+        box-shadow: 3px 3px 8px 1px $main-color;
+        transform: scale(1.05);
+    }
+}
+
+.nav__social {
+    margin: 24px 0;
+}
+
+.nav__icon {
+    margin: 8px;
+
+    svg {
+        font-size: 24px;
         color: $text-color;
     }
 }
 
-// ion-icon {
-// //     font-size: 24px;
-// //     color: $text-color;
-// // }
+.nav__telegram svg:hover {
+    color: $telegram-icon;
+}
+
+.nav__whatsapp svg:hover {
+    color: $whatsapp-icon;
+}
+
+.nav__linkedin svg:hover {
+    color: $linkedin-icon;
+}
+
+.nav__instagram svg:hover {
+    color: $instagram-icon;
+}
+
+.nav__mail svg:hover {
+    color: $secondary-main-color;
+}
+
+.nav__contact-item {
+    line-height: 24px;
+    color: $text-color;
+}

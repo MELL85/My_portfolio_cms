@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { About, Experience, Footer, Header, ServSection, Testimonials, Work } from './container';
-import { Navbar, NavbarLeft } from './components';
+import { Navbar } from './components';
 
 import './App.scss';
 

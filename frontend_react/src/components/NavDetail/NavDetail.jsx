@@ -9,7 +9,7 @@ const NavDetail = () => {
     return (
         <div className="nav__detail">
             <div className="nav__name-block">
-                <h3 className="nav__logo-name">Melnyk Yevhen</h3>
+                <h3 className="nav__logo-name">M<span>elnyk</span> Y<span>evhen</span></h3>
                 <h4 className="nav__logo-descr">Front End Developer</h4>
                 <a href="#" className="nav__cv-link">Download CV</a>
             </div>
@@ -28,7 +28,7 @@ const NavDetail = () => {
                 <a href="#" target="_blank" className="nav__icon nav__instagram">
                     <IoLogoInstagram />
                 </a>
-                <a href="#" target="_blank" className="nav__icon nav__mail">
+                <a href="mailto:melnyk_evgenij@icloud.com" target="_blank" className="nav__icon nav__mail">
                     <IoMdMail />
                 </a>
             </div>

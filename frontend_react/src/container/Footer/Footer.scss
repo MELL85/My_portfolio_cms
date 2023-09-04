@@ -1,0 +1,170 @@
+@import '../../variables.scss';
+
+.App-footer {
+    // background-color: $main-color-bg;
+    padding: 60px 16px 20px;
+    margin: -1px 0 0;
+    color: #fff;
+}
+
+.footer__block {
+    @media screen and (min-width: 992px) {
+        display: flex;
+        flex: 1;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+        gap: 100px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        gap: 200px;
+    }
+}
+
+.footer {
+    &__logo {
+        border-radius: 10px;
+        // width: 70px;
+        height: 70px;
+        margin: 0 0 16px;
+        // filter: contrast(.5);
+    }
+
+    &__main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 40px 0 0;
+
+        @media screen and (min-width: 992px) {
+            margin: 0;
+            justify-content: flex-start;
+            padding: 64px 0 0;
+        }
+    }
+
+    &__contact-block {
+        margin: 0 0 16px;
+    }
+}
+
+.form {
+    &__head-block {
+        background-color: $services-item-bg;
+        border-radius: 20px;
+        padding: 32px 16px;
+        margin: 8px 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media screen and (min-width: 992px) {
+            margin-top: 0;
+            padding: 72px 16px;
+        }
+    }
+
+    &__head-title-block {
+        padding: 0 15px;
+    }
+
+    &__head-title {
+        font-size: 28px;
+        color: $text-color;
+
+        @media screen and (min-width: 992px) {
+            font-size: 38px;
+        }
+    }
+
+    &__head-title>span {
+        color: $secondary-main-color;
+    }
+
+    &__block {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-name {
+        background-color: $services-item-bg;
+        margin: 16px 0;
+        border: transparent;
+        font-size: 16px;
+        border-bottom: 1px solid $contact-line;
+        padding: 16px 0 8px;
+        cursor: text;
+        width: 100%;
+    }
+
+    &__item>input:hover {
+        border: 1px solid $accent-color;
+    }
+
+    &__item>textarea:hover {
+        border: 1px solid $accent-color;
+    }
+
+    &__item-mail {
+        background-color: $services-item-bg;
+        margin: 16px 0;
+        font-size: 16px;
+        border: transparent;
+        border-bottom: 1px solid $contact-line;
+        padding: 16px 0 8px;
+        cursor: text;
+        width: 100%;
+    }
+
+    &__item-message {
+        background-color: $services-item-bg;
+        margin: 16px 0;
+        border: transparent;
+        font-size: 16px;
+        border-bottom: 1px solid $contact-line;
+        padding: 16px 0 8px;
+        cursor: text;
+        resize: none;
+        width: 100%;
+        min-height: 140px;
+    }
+
+    &__btn-block {
+        margin: 16px 0 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn-block>button {
+        padding: 10px 36px;
+        border-radius: 10px;
+        background: $secondary-main-color-gradient;
+        color: $main-color;
+        border: $secondary-main-color;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all .3s ease;
+
+        &:hover {
+            box-shadow: 3px 3px 8px 1px $main-color;
+            font-size: 16px;
+            transform: scale(1.05);
+
+        }
+    }
+
+
+}
+
+.navDetail__wrapper {
+    margin: -24px 0 0;
+}

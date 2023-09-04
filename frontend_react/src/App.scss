@@ -1,22 +1,23 @@
 @import './variables.scss';
 
-/* .app {
-  width: 1100px;
-  margin: 0 auto;
-  padding: 50px 0 50px 0;
-  position: relative;
-  .bg-decoration {
-      position: absolute;
-      right: -174px;
-      bottom: -70px;
-      z-index: -1;
-  }
-} */
+.App {
+    background: $main-color-bg-gradient;
+    //   width: 1100px;
+    //   margin: 0 auto;
+    //   padding: 50px 0 50px 0;
+    //   position: relative;
+    //   .bg-decoration {
+    //       position: absolute;
+    //       right: -174px;
+    //       bottom: -70px;
+    //       z-index: -1;
+    //   }
+}
 
 main {
     /* margin-top: 50px; */
     position: relative;
-    background: $main-color-bg-gradient;
+    // background: $main-color-bg-gradient;
 
     // background: $main-color-bg;
     /* background: $test-bg-gradient-2; */
