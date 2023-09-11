@@ -2,10 +2,7 @@
 
 
 .App-experience {
-    // background-color: $main-color-bg;
-    // background: #fff;
     padding: 40px 0 0;
-    // margin: -1px 0 0;
 
     @media screen and (min-width: 992px) {
         margin: 120px 0 0;
@@ -17,11 +14,13 @@
     display: flex;
     flex-direction: column;
 
-    // @media screen and (min-width: 992px) {
-    //     // grid-template-columns: repeat(2, 1fr);
-    //     grid-template-columns: repeat(3, 1fr);
-    //     // grid-template-rows: repeat(2);
-    // }
+    @media screen and (min-width: 992px) {
+        margin-top: 50px;
+    }
+
+    @media screen and (min-width: 1300px) {
+        margin-top: 0;
+    }
 }
 
 .experience__block-up {
@@ -32,7 +31,18 @@
         flex-direction: row;
         justify-content: flex-start;
         position: relative;
+        margin-bottom: 60px;
     }
+
+    @media screen and (min-width: 1300px) {
+        margin-bottom: 45px;
+    }
+}
+
+.experience__empty-wrapper {
+    display: flex;
+    flex: 0.2;
+    flex-direction: column;
 }
 
 .experience__empty-block {
@@ -41,16 +51,15 @@
     @media screen and (min-width: 1300px) {
         display: block;
         max-width: 17%;
-        position: relative;
-        border-right: 1px solid $main-color ;
+        position: absolute;
     }
 }
 
 .experience__empty-text {
     @media screen and (min-width: 1300px) {
         position: relative;
-        top: 250px;
-        left: 80px;
+        top: 380px;
+        left: 0;
         color: $text-color;
         font-size: 45px;
         text-transform: uppercase;
@@ -65,9 +74,6 @@
 
 .experience__block-item-list {
     @media screen and (min-width:992px) {
-        // grid-column-start: 1;
-        // grid-column-end: 2;
-        // grid-row-start: 1;
         display: flex;
         flex: .6;
         flex-direction: column;
@@ -77,10 +83,8 @@
 
 .experience__block-progress-list {
     @media screen and (min-width:992px) {
-        // grid-column-start: 2;
-        // grid-row-start: 1;
         display: flex;
-        flex: .8;
+        flex: .9;
         flex-direction: column;
         max-width: 100%;
     }
@@ -90,9 +94,5 @@
     @media screen and (min-width:992px) {
         max-width: 100%;
         flex: 1;
-        // grid-column-start: 1;
-        // grid-column-end: 3;
-        // grid-row-start: 2;
-        // max-width: 900px;
     }
 }

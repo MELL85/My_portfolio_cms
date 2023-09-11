@@ -43,18 +43,38 @@ const Footer = () => {
     <div className="footer__head-block">
       <div className="container">
         <div className="footer__block">
-          <div className="form__head-block">
-            <div className="form__head-title-block">
-              <h3 className="form__head-title">Contact <br /> <span>ME</span></h3>
-            </div>
 
-            {!isFormSubmitted ?
+          {!isFormSubmitted ?
+
+            <div className="form__head-block">
+              <div className="form__head-title-block">
+                <h3 className="form__head-title">Contact <br /> <span>ME</span></h3>
+              </div>
               <div className="form__block">
                 <form action="#" className="contact__form" method="post">
                   <div className="form__item">
-                    <input type="text" className="form__item-name" placeholder="What is your name? *" name="user-name" value={name} onChange={handleChangeInput} required />
-                    <input type="mail" className="form__item-mail" name="user-email" value={email} placeholder="What it your email? *" onChange={handleChangeInput} required />
-                    <textarea type="text" className="form__item-message" name="user-message" value={message} placeholder="Write your message here" onChange={handleChangeInput} maxLength={2000} />
+                    <input
+                      type="text"
+                      className="form__item-name"
+                      placeholder="What is your name? *"
+                      name="name" value={name}
+                      onChange={handleChangeInput}
+                      required />
+                    <input
+                      type="mail"
+                      className="form__item-mail"
+                      name="email" value={email}
+                      placeholder="What it your email? *"
+                      onChange={handleChangeInput}
+                      required />
+                    <textarea
+                      type="text"
+                      className="form__item-message"
+                      name="message"
+                      value={message}
+                      placeholder="Write your message here"
+                      onChange={handleChangeInput}
+                      maxLength={2000} />
                   </div>
                   <div className="form__btn-block">
                     {/* <button type="submit">Send Message</button> */}
@@ -62,12 +82,13 @@ const Footer = () => {
                   </div>
                 </form>
               </div>
-              : <div >
-                <h3 className="head-text">Thank you for getting in touch!</h3>
-              </div>
-            }
+            </div>
 
-          </div>
+            : <div >
+              <h3 className="head-text">Thank you for <br /> getting in touch!</h3>
+            </div>
+          }
+
           <div className="footer__main-block">
             <div className="footer__contact-block">
               <img src={logo} alt="my_logo" className="footer__logo" />

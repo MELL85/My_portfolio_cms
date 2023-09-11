@@ -8,3 +8,4 @@ export { default as ExperienceCounterList } from './ExperienceCounterList/Experi
 export { default as ExperienceItemList } from './ExperienceItemList/ExperienceItemList';
 export { default as NavigationDots } from './NavigationDots';
 export { default as SocialMedia } from './SocialMedia';
+export { default as NavTranslate } from './NavTranslate/NavTranslate';

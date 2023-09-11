@@ -1,39 +1,58 @@
 @import '../../variables.scss';
 
+.progress__line {
+    @media screen and (min-width: 1300px) {
+        border-bottom: 2px solid $main-color;
+        border-right: 2px solid $main-color;
+        height: 12%;
+        width: 63%;
+        margin-top: 2px;
+    }
+
+    @media screen and (min-width: 1600px) {
+        width: 65%;
+        height: 11.5%;
+        margin-top: 5px;
+    }
+}
+
 .progress {
     padding: 0 24px 64px;
     display: flex;
     flex: 1;
+    width: 100%;
     flex-direction: column;
     width: 100%;
 
-
-    // @media screen and (min-width: 992px) {
-    //     margin: 0 80px 0 -80px;
-    // }
-
     @media screen and (min-width: 1300px) {
         padding: 40px 32px 40px 24px;
-        // border-top: 1px solid $main-color;
 
-    }
-
-    &__head-title {
-        font-size: 18px;
-        font-weight: 600;
-        margin: 0 0 24px;
-        color: $main-color;
-        letter-spacing: .5px;
-
-        @media screen and (min-width: 992px) {
-            font-size: 24px;
-        }
     }
 }
 
+.progress__head-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 16px 24px;
+    color: $main-color;
+    letter-spacing: .5px;
+
+    @media screen and (min-width: 767px) {
+        font-size: 28px;
+    }
+
+    @media screen and (min-width: 992px) {
+        font-size: 32px;
+    }
+
+    @media screen and (min-width: 1300px) {
+        font-size: 36px;
+    }
+}
+
+
 .progress__skills-container {
     width: 80%;
-    margin: 3rem 0 0;
 
     display: flex;
     flex-direction: row;
@@ -51,8 +70,6 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin-right: 5rem;
-
     @media screen and (max-width: 900px) {
         margin-right: 0;
         justify-content: center;
@@ -67,8 +84,8 @@
     transition: all 0.3s ease-in-out;
 
     div {
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         background: $text-color;
 
@@ -81,9 +98,9 @@
             box-shadow: 0 0 25px $main-color;
         }
 
-        @media screen and (min-width: 2000px) {
-            width: 150px;
-            height: 150px;
+        @media screen and (min-width: 767px) {
+            width: 75px;
+            height: 75px;
         }
 
         @media screen and (min-width: 2000px) {

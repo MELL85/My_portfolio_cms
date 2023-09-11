@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
 
-
+ 
 import './ServSection.scss';
 
 const ServSection = () => {
-
+ 
   const [services, setServices] = useState([]);
 
   useEffect(() => {

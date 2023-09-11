@@ -1,11 +1,7 @@
 @import '../../variables.scss';
 
 .App-work {
-    // background-color: $main-color-bg;
     padding: 40px 0 40px;
-    // margin: -1px 0 0;
-    // position: relative;
-    // z-index: 30;
     flex: 1;
     width: 100%;
     flex-direction: column;
@@ -33,13 +29,16 @@
 
     &__head-title {
         font-size: 24px;
-        font-weight: 200;
+        font-weight: 400;
         letter-spacing: 1px;
         color: $main-color;
-        // color: $text-color;
 
         strong {
             opacity: .5;
+        }
+
+        @media screen and (min-width: 767px) {
+            font-size: 28px;
         }
 
         @media screen and (min-width: 992px) {
@@ -52,7 +51,7 @@
 .work__filter {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     color: $text-color;
@@ -113,11 +112,6 @@
             padding: 1.25rem;
             border-radius: 0.75rem;
         }
-
-        // @media screen and (max-width: 300px) {
-        //     width: 100%;
-        //     margin: 1rem;
-        // }
     }
 }
 

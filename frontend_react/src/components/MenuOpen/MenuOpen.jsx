@@ -5,6 +5,21 @@ import {NavDetail} from '../../components';
 import './MenuOpen.scss';
 
 
+// window.onscroll = () => {
+//     const menu = document.querySelector('#navbar');
+//     const menu2 = document.querySelector('#navbar-desctop');
+//     const active = window.scrollY;
+
+//     if (active > 300) {
+//         menu.classList.add('navbar_scrolled');
+//         menu2.classList.add('navbar_scrolled');
+//     } else if (active < 100) {
+//         menu.classList.remove('navbar_scrolled');
+//         menu2.classList.remove('navbar_scrolled');
+//     }
+// }
+
+
 const MenuOpen = (props) => {
 
     const classActive = props.active ? 'active' : null;
@@ -18,11 +33,11 @@ const MenuOpen = (props) => {
                             <p className="nav__text-media">explore</p>
                         </div>
                         <ul className="nav__list">
-                            {['about', 'services', 'my work', 'testimonials', 'contact'].map((item) => (
+                            {['about', 'services', 'work', 'testimonials', 'contact'].map((item) => (
                                 <li key={`link-${item}`} className="nav__list-item">
                                     <a href={`#${item}`} className="nav__list-item-link">{item}</a>
                                 </li>
-                            ))}
+                            ))} 
                         </ul>
                     </div>
 

@@ -1,58 +1,61 @@
 @import '../../variables.scss';
 
-.counter {
-    &__item {
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    &__item-title {
-        display: flex;
-        color: $main-color;
-        font-size: 28px;
+.counter__item {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        @media screen and (min-width: 767px) {
-            font-size: 38px;
-        }
+.counter__item-title {
+    display: flex;
+    color: $main-color;
+    opacity: .9;
+    font-size: 28px;
 
-        @media screen and (min-width: 1300px) {
-            font-size: 48px;
-        }
-    }
-    &__item-title-down {
-        color: $main-color-bg;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: .5px;
-
-        @media screen and (min-width: 767px) {
-            font-size: 20px;
-        }
-
-        @media screen and (min-width: 1300px) {
-            font-size: 22px;
-        }
-    }
-    &__item-icon-block {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        gap: 15px;
-    }
-    &__item-icon {
-        display: flex;
+    @media screen and (min-width: 767px) {
         font-size: 38px;
-        color: $main-color-bg;
+    }
 
-        @media screen and (min-width: 767px) {
-            font-size: 54px;
-        }
+    @media screen and (min-width: 1300px) {
+        font-size: 48px;
+    }
+}
 
-        @media screen and (min-width: 992px) {
-            font-size: 64px;
-        }
+.counter__item-title-down {
+    color: $main-color-bg;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+
+    @media screen and (min-width: 767px) {
+        font-size: 20px;
+    }
+
+    @media screen and (min-width: 1300px) {
+        font-size: 22px;
+    }
+}
+
+.counter__item-icon-block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.counter__item-icon {
+    display: flex;
+    font-size: 38px;
+    color: $main-color-bg;
+
+    @media screen and (min-width: 767px) {
+        font-size: 54px;
+    }
+
+    @media screen and (min-width: 992px) {
+        font-size: 64px;
     }
 }

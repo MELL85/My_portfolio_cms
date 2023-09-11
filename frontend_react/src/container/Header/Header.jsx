@@ -15,13 +15,17 @@ const Header = () => {
         </div>
         <div className="header__banner">
           <div className="header__text-block">
-            <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.7 }}>
+            <motion.div
+              whileInView={{ x: [200, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
+            > 
               <h4 className="header__text-title">Hello</h4>
             </motion.div>
 
-            <motion.div whileInView={{ x: [300, 0], opacity: [0, 1] }}
-              transition={{ duration: 0.7 }}>
+            <motion.div
+              whileInView={{ x: [-200, 0], opacity: [0, 1] }}
+              transition={{ duration: 0.7 }}
+            >
               <h1 className="header__text-head-title">I am Yevhen, Front End Developer</h1>
             </motion.div>
 

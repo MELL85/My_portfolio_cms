@@ -28,10 +28,10 @@ const Navbar = () => {
                     [<RiMessage2Fill />, 'testimonials'],
                     [<IoIosMail />, 'contact']
                 ].map((item) => (
-
+ 
                     <li className='app__flex app__navbarLeft-links' key={`link-${item}`} >
                         <div className="app__navbarLeft-dot" />
-                        <a href={`#${item}`} className="app__navbarLeft-link" >
+                        <a href={`#${item[1]}`} className="app__navbarLeft-link" >
                             {item[0]}
                             <p className="app__navbarLeft-link-text">{item[1]}</p>
                         </a>

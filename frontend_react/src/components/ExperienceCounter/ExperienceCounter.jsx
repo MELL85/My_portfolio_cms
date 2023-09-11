@@ -13,7 +13,7 @@ const ExperienceCounter = (props) => {
                 <div className="counter__item-icon">{iconC}</div>
                 <h4 className="counter__item-title">{titleC}</h4>
             </div>
-            <h6 className="counter__item-title-down">{textC}</h6>
+            <h6 className="counter__item-title-down">{textC}</h6> 
         </div>
     );
 

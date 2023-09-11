@@ -16,7 +16,7 @@ function App() {
         <Header />
       </header>
       <main>
-        <section className='App-about-me'>
+        <section className='App-about-me' id="about">
           <About />
         </section>
         <section className='App-experience' id="experience">

@@ -1,6 +1,6 @@
 import React from 'react'
-import { IoMdMail, IoLogoInstagram } from 'react-icons/io';
-import { FaTelegramPlane, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { IoMdMail } from 'react-icons/io';
+import { FaTelegramPlane, FaLinkedin, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 import './NavDetail.scss';
 
@@ -26,7 +26,7 @@ const NavDetail = () => {
                     <FaLinkedin />
                 </a>
                 <a href="#" target="_blank" className="nav__icon nav__instagram">
-                    <IoLogoInstagram />
+                    <FaInstagram />
                 </a>
                 <a href="mailto:melnyk_evgenij@icloud.com" target="_blank" className="nav__icon nav__mail">
                     <IoMdMail />

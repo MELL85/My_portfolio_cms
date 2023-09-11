@@ -20,24 +20,27 @@ const Skills = () => {
 
     return (
 
-        <div className="progress">
-            <h5 className="progress__head-title">SKILLS</h5>
-            <div className="progress__skills-container">
-                <motion.div className="progress__skills-list">
-                    {skills.map((skill) => (
-                        <motion.div
-                            whileInView={{ opacity: [0, 1] }}
-                            transition={{ duration: 0.5 }}
-                            className="progress__skills-item app__flex"
-                            key={skill.name}
-                        >
-                            <div className="app__flex" style={{ backgroundColor: skill.bgColor }}>
-                                <img src={urlFor(skill.icon)} alt={skill.name} />
-                            </div>
-                            <p className="progress__skills-item-text">{skill.name}</p>
-                        </motion.div>
-                    ))}
-                </motion.div>
+        <div className="progress__wrapper">
+            <div className="progress__line"></div>
+            <div className="progress">
+                <h5 className="progress__head-title">SKILLS</h5>
+                <div className="progress__skills-container">
+                    <motion.div className="progress__skills-list">
+                        {skills.map((skill) => (
+                            <motion.div
+                                whileInView={{ opacity: [0, 1] }}
+                                transition={{ duration: 0.5 }}
+                                className="progress__skills-item app__flex"
+                                key={skill.name}
+                            >
+                                <div className="app__flex" style={{ backgroundColor: skill.bgColor }}>
+                                    <img src={urlFor(skill.icon)} alt={skill.name} />
+                                </div>
+                                <p className="progress__skills-item-text">{skill.name}</p>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </div>
 

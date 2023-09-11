@@ -15,29 +15,22 @@
 }
 
 main {
-    /* margin-top: 50px; */
     position: relative;
-    // background: $main-color-bg-gradient;
-
-    // background: $main-color-bg;
-    /* background: $test-bg-gradient-2; */
-    /* background: $test-bg-gradient; */
-    /* background: $test-bg-gradient-3; */
 }
 
 .container {
-    margin-inline: 8px;
+    padding-inline: 8px;
+    margin: 0 auto;
     width: 100%;
     // min-height: 100vh;
-    // margin: 0 auto;
     // max-width: 1280px;
 
     @media screen and (min-width: 982px) {
-        margin-inline: 16px;
+        padding-inline: 16px;
     }
 
     @media screen and (min-width: 1300px) {
-        margin-inline: 24px;
+        padding-inline: 24px;
     }
 }
 

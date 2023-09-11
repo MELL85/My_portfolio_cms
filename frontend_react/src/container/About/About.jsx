@@ -37,7 +37,7 @@ const About = () => {
               <h5 className="about-me__title">{about.description}</h5>
             </motion.div>
           ))}
-
+ 
           <SocialIcons />
         </div>
         <div className="about-me__desctop-line-block"></div>

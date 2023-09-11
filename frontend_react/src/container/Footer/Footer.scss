@@ -53,6 +53,16 @@
     }
 }
 
+.head-text {
+    margin: 60px 0 0;
+    font-size: 46px;
+    
+    background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(245, 207, 2, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .form {
     &__head-block {
         background-color: $services-item-bg;
