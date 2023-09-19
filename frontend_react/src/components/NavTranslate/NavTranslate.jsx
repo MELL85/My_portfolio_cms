@@ -16,11 +16,11 @@ const NavTranslate = (props) => {
                         <a href="#">ua</a>
                     </div>
                     <div className="light__block app__flex">
-                        <p>theme</p>
-                        <label class="light__block-switch">
-                            <input type="checkbox" />
-                            <span class="light__block-slider round"></span>
+                        <p>dark</p>
+                        <input id="checkboxInput" type="checkbox" />
+                        <label class="toggleSwitch" for="checkboxInput">
                         </label>
+                        <p>light</p>
                     </div>
                 </div>
             </div>

@@ -40,8 +40,7 @@ const ExperienceItemList = () => {
                                                 whileInView={{ opacity: [0, 1] }}
                                                 transition={{ duration: 0.5 }}
                                                 className="experience__list-item-work"
-                                                data-tip
-                                                data-for={work.name}
+                                                data-tooltip-id={work.name}
                                                 key={work.name}
                                             >
                                                 <li className="experience__list-item">

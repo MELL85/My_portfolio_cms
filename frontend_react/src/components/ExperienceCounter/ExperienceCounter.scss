@@ -11,8 +11,9 @@
 .counter__item-title {
     display: flex;
     color: $main-color;
-    opacity: .9;
+    opacity: .8;
     font-size: 28px;
+    font-weight: 200;
 
     @media screen and (min-width: 767px) {
         font-size: 38px;
@@ -24,7 +25,7 @@
 }
 
 .counter__item-title-down {
-    color: $main-color-bg;
+    color: $text-color;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: .5px;
@@ -49,7 +50,7 @@
 .counter__item-icon {
     display: flex;
     font-size: 38px;
-    color: $main-color-bg;
+    color: $text-color;
 
     @media screen and (min-width: 767px) {
         font-size: 54px;

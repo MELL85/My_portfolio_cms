@@ -17,6 +17,14 @@ import threejs from '../assets/img/threejs.png';
 import bg from '../assets/img/bg.png';
 import myFoto from '../assets/img/myFoto.jpg';
 import worldMap from '../assets/img/worldMap.svg';
+import people_1 from '../assets/img/people_1.jpg';
+import people_2 from '../assets/img/people_2.jpg';
+import people_3 from '../assets/img/people_3.jpg';
+import people_4 from '../assets/img/people_4.jpg';
+import people_5 from '../assets/img/people_5.jpg';
+import people_6 from '../assets/img/people_6.jpg';
+import people_7 from '../assets/img/people_7.jpg';
+import people_8 from '../assets/img/people_8.jpg';
 
 export default {
     bootstrap,
@@ -37,5 +45,13 @@ export default {
     threejs,
     bg,
     myFoto,
-    worldMap
+    worldMap,
+    people_1,
+    people_2,
+    people_3,
+    people_4,
+    people_5,
+    people_6,
+    people_7,
+    people_8
 };

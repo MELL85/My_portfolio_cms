@@ -152,7 +152,7 @@
         height: 50px;
         border-radius: 50%;
         background: rgba($color: #000000, $alpha: 0.5);
-        color: $text-color;
+        color: $text-color;    
         margin: 1rem;
         font-weight: 800;
         cursor: pointer;
@@ -161,7 +161,9 @@
         svg {
             width: 50%;
             height: 50%;
-            color: $text-color;
+            // color: $text-color;
+            color: $main-color;
+            // color: $secondary-main-color;
         }
     }
 }

@@ -9,3 +9,4 @@ export { default as ExperienceItemList } from './ExperienceItemList/ExperienceIt
 export { default as NavigationDots } from './NavigationDots';
 export { default as SocialMedia } from './SocialMedia';
 export { default as NavTranslate } from './NavTranslate/NavTranslate';
+// export { default as Map } from './Map/Map';

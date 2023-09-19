@@ -4,7 +4,7 @@
     background-color: $main-color-bg;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    width: 20vw;
+    width: 35vw;
     height: 20vh;
     position: fixed;
     display: flex;
@@ -21,7 +21,7 @@
     }
 
     @media screen and (min-width: 767px) {
-        width: 17vw;
+        width: 20vw;
         height: 15vh;
     }
 
@@ -33,7 +33,7 @@
     @media screen and (min-width: 1300px) {
         width: 10vw;
         height: 20vh;
-     }
+    }
 }
 
 .translate__head-block {
@@ -66,22 +66,50 @@
 }
 
 .light__block {
-    flex-direction: column;
+    // flex-direction: column;
 
     p {
         color: $secondary-main-color;
-        margin: 0 0 5px;
+        margin: 7px;
     }
 }
 
-.light__block-switch {
-    padding: 0 14px;
-    background: $text-color;
-    border-radius: 25px;
+#checkboxInput {
+    display: none;
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: rgb(206, 206, 206);
+    border-radius: 40px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
 
-    appearance: none;
-    // user-select: none;
-    // -webkit-user-select: none;
+.toggleSwitch::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 50%;
+    left: 0px;
+    background: conic-gradient(rgba(26, 26, 26, 0.555), white, rgba(26, 26, 26, 0.555), white, rgba(26, 26, 26, 0.555));
+    border-radius: 40px;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.281);
+}
 
+#checkboxInput:checked+.toggleSwitch::after {
+    transform: translateX(100%);
+    transition-duration: .3s;
+}
+
+#checkboxInput:checked+.toggleSwitch {
+    background: $main-color;
+    opacity: 0.9;
+    transition-duration: .3s;
 }

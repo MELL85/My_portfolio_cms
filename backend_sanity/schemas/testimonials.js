@@ -22,14 +22,24 @@ export default {
             }
         },
         {
-            name: 'feedback',
-            title: 'Feedback',
+            name: 'feedbackEn',
+            title: 'FeedbackEn',
             type: 'string'
         },
         {
-            name: 'location',
-            title: 'Testimonial Location',
-            type: 'geopoint',
+            name: 'feedbackUa',
+            title: 'FeedbackUa',
+            type: 'string'
         },
+        {
+            name: 'country',
+            title: 'Country',
+            type: 'string'
+        },
+        // {
+        //     name: 'location',
+        //     title: 'Testimonial Location',
+        //     type: 'geopoint',
+        // },
     ]
 }

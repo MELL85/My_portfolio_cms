@@ -35,7 +35,7 @@ const MenuOpen = (props) => {
                         <ul className="nav__list">
                             {['about', 'services', 'work', 'testimonials', 'contact'].map((item) => (
                                 <li key={`link-${item}`} className="nav__list-item">
-                                    <a href={`#${item}`} className="nav__list-item-link">{item}</a>
+                                    <a href={`#${item}`} className="nav__list-item-link" >{item}</a>
                                 </li>
                             ))} 
                         </ul>
