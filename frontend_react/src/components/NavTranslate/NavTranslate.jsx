@@ -11,9 +11,9 @@ const NavTranslate = (props) => {
             <div className="container">
                 <div className="translate__head-block app__flex">
                     <div className="translate__main-block">
-                        <a href="#">en</a>
+                        <button>en</button>
                         <span>|</span>
-                        <a href="#">ua</a>
+                        <button>ua</button>
                     </div>
                     <div className="light__block app__flex">
                         <p>dark</p>

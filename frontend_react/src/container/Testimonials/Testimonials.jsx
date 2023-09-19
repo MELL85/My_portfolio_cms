@@ -4,7 +4,6 @@ import { Tooltip } from 'react-tooltip';
 
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { AppWrap } from '../../wrapper';
-import { Map } from '../../components';
 import { urlFor, client } from '../../client';
 
 import images from '../../constants/images';

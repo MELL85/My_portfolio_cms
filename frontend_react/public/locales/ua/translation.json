@@ -1,0 +1,46 @@
+{
+    "header": {
+        "hello": "Привіт",
+        "name": "Я Євген, Front End Developer",
+        "description": "Я створюю ефективний UI для мобільних пристроїв або веб-дизайн, а також досліджую UX, щоб переконатися, що я отримую те, що потрібно людям, і стратегію дизайну взаємодії.",
+        "download": "Завантаж CV"
+    },
+    "workExp": {
+
+    },
+    "counter": {
+
+    },
+    "services": {
+
+    },
+    "works": {
+
+    },
+    "testimonials": {
+
+    },
+    "footer": {
+
+    },
+    "navDetail": {
+
+    },
+    "menuOpen": {
+
+    },
+    "navbarLeft": {
+
+    },
+    "navTranslate": {
+
+    }
+}
+
+
+{
+    "Hello": ,
+    "I am Yevhen, Front End Developer": ,
+    "I create an efficient UI mobile or web design also UX research to make sure that I get what people needs and strategy for interaction design.": ,
+    "Download CV": ""
+}

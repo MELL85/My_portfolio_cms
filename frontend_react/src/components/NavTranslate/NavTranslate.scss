@@ -47,8 +47,11 @@
     align-items: center;
     justify-content: center;
 
-    a {
+    button {
         color: $main-color;
+        border: none;
+        background: transparent;
+        cursor: pointer;
 
         &:hover {
             color: $secondary-main-color;
