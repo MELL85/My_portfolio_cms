@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import { useTranslation } from 'react-i18next';
+
 import { SocialIcons } from '../../components';
 import './About.scss';
 import { client } from '../../client';
@@ -8,6 +10,9 @@ import { client } from '../../client';
 import myFoto from '../../assets/img/myFoto.jpg';
 
 const About = () => {
+
+  const { i18n } = useTranslation();
+  const locale = i18n.language;
 
   const [abouts, setAbouts] = useState([]);
 
@@ -17,7 +22,6 @@ const About = () => {
     client.fetch(query)
       .then((data) => setAbouts(data))
   }, [])
-  
 
   return (
     <div className="container">
@@ -34,10 +38,10 @@ const About = () => {
               whileInView={{ scale: [0, 1], opacity: [0, 1] }}
               transition={{ duration: 1, ease: 'easeInOut' }}
               key={about.description + index} >
-              <h5 className="about-me__title">{about.description}</h5>
+              <h5 className="about-me__title">{locale === 'en' ? about.description : about.descriptionUA}</h5>
             </motion.div>
           ))}
- 
+
           <SocialIcons />
         </div>
         <div className="about-me__desctop-line-block"></div>

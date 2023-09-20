@@ -25,6 +25,8 @@ import people_5 from '../assets/img/people_5.jpg';
 import people_6 from '../assets/img/people_6.jpg';
 import people_7 from '../assets/img/people_7.jpg';
 import people_8 from '../assets/img/people_8.jpg';
+import uaR from '../assets/img/uaR.png';
+import usaR from '../assets/img/usaR.png';
 
 export default {
     bootstrap,
@@ -53,5 +55,7 @@ export default {
     people_5,
     people_6,
     people_7,
-    people_8
+    people_8,
+    uaR,
+    usaR
 };

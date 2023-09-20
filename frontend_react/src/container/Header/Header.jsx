@@ -36,10 +36,10 @@ const Header = () => {
             </motion.div>
 
             <div className="header__desctop-block">
-              <h5 className="header__desctop-head-text">I create an efficient UI mobile or web design also UX research to make sure that I get what people needs and strategy for interaction design.</h5>
+              <h5 className="header__desctop-head-text">{t('header.description')}</h5>
 
               <div className="header__desctop-icon-cv-block">
-                <a href="#" className="nav__cv-link">Download CV</a>
+                <a href="#" className="nav__cv-link">{t('header.download')}</a>
                 <SocialIcons />
               </div>
             </div>

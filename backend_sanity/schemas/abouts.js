@@ -8,5 +8,10 @@ export default {
             title: 'Description',
             type: 'string'
         },
+        {
+            name: 'descriptionUA',
+            title: 'DescriptionUA',
+            type: 'string'
+        }
     ]
 }
