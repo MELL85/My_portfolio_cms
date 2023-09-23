@@ -1,6 +1,8 @@
-import React from 'react';
-
+import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../providers/ThemeProvider';
+
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 import './NavTranslate.scss';
 import images from '../../constants/images';
@@ -12,9 +14,33 @@ const locales = {
 
 const NavTranslate = (props) => {
 
+    const [theme, setTheme] = useContext(ThemeContext);
+
+    const [savedTheme, setSavedTheme] = useLocalStorage('theme', 'dark');
+
+    useEffect(() => {
+        console.log('Saved Theme:', savedTheme);
+    }, [savedTheme]);
+
+    useEffect(() => {
+        if (!savedTheme) {
+            setSavedTheme(theme);
+        } else {
+            setTheme(savedTheme);
+        }
+    }, []);
+
+    const changeTheme = () => {
+        // setTheme(theme === 'dark' ? 'light' : 'dark');
+
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        setSavedTheme(newTheme);
+    }
+
     const classActive = props.active ? 'active' : null;
 
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <div className={`translate ${classActive}`}>
@@ -34,11 +60,11 @@ const NavTranslate = (props) => {
                     </div>
 
                     <div className="light__block app__flex">
-                        <p>dark</p>
-                        <input id="checkboxInput" type="checkbox" />
-                        <label class="toggleSwitch" for="checkboxInput">
+                        <p>{t('navTranslate.dark')}</p>
+                        <input id="checkboxInput" type="checkbox" onClick={changeTheme} />
+                        <label className="toggleSwitch" for="checkboxInput" >
                         </label>
-                        <p>light</p>
+                        <p>{t('navTranslate.light')}</p>
                     </div>
                 </div>
             </div>

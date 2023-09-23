@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
-
+import { useTranslation } from 'react-i18next';
 import { client } from '../../client';
 
 import './ExperienceItemList.scss';
-
+ 
 const ExperienceItemList = () => {
-
+    const { i18n } = useTranslation();
+    const locale = i18n.language;
     const [experience, setExperience] = useState([]);
 
     useEffect(() => {
@@ -45,7 +46,7 @@ const ExperienceItemList = () => {
                                             >
                                                 <li className="experience__list-item">
                                                     <div className="experience__list-item-block">
-                                                        <h5 className="experience__list-item-head-title">{work.name}</h5>
+                                                        <h5 className="experience__list-item-head-title">{locale === 'en' ? work.name : work.nameUA}</h5>
                                                         <p className="experience__list-item-title">{work.company}</p>
                                                     </div>
                                                 </li>
@@ -57,7 +58,7 @@ const ExperienceItemList = () => {
                                                 arrowColor="#fff"
                                                 className="experience-tooltip"
                                             >
-                                                {work.desc}
+                                                {locale === 'en' ? work.desc : work.descUA}
                                             </Tooltip>
                                         </>
                                     ))}

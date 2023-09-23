@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { NavDetail } from "../../components";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from '../../client';
 
-import './Footer.scss';
 import logo from '../../assets/logo/my_logo_2.png';
-
+import './Footer.scss';
 
 const Footer = () => {
+  const { t } = useTranslation();
 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -48,7 +48,7 @@ const Footer = () => {
 
             <div className="form__head-block">
               <div className="form__head-title-block">
-                <h3 className="form__head-title">Contact <br /> <span>ME</span></h3>
+                <h3 className="form__head-title">{t('footer.headTitle')}<br /> <span>{t('footer.headTitleSpan')}</span></h3>
               </div>
               <div className="form__block">
                 <form action="#" className="contact__form" method="post">
@@ -56,7 +56,7 @@ const Footer = () => {
                     <input
                       type="text"
                       className="form__item-name"
-                      placeholder="What is your name? *"
+                      placeholder={t('footer.placeholderText')}
                       name="name" value={name}
                       onChange={handleChangeInput}
                       required />
@@ -64,7 +64,7 @@ const Footer = () => {
                       type="mail"
                       className="form__item-mail"
                       name="email" value={email}
-                      placeholder="What it your email? *"
+                      placeholder={t('footer.placeholderMail')}
                       onChange={handleChangeInput}
                       required />
                     <textarea
@@ -72,20 +72,19 @@ const Footer = () => {
                       className="form__item-message"
                       name="message"
                       value={message}
-                      placeholder="Write your message here"
+                      placeholder={t('footer.placeholderMessage')}
                       onChange={handleChangeInput}
                       maxLength={2000} />
                   </div>
                   <div className="form__btn-block">
-                    {/* <button type="submit">Send Message</button> */}
-                    <button type="button" onClick={handleSubmit} >{loading ? 'Sending' : 'Send Message'}</button>
+                    <button type="button" onClick={handleSubmit} >{loading ? t('footer.formBtnSending') : t('footer.formBtn')}</button>
                   </div>
                 </form>
               </div>
             </div>
 
             : <div >
-              <h3 className="head-text">Thank you for <br /> getting in touch!</h3>
+              <h3 className="head-text">{t('footer.message')}<br /> {t('footer.message2')}</h3>
             </div>
           }
 

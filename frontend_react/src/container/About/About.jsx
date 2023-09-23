@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 import { useTranslation } from 'react-i18next';
-
-import { SocialIcons } from '../../components';
-import './About.scss';
 import { client } from '../../client';
 
+import { SocialIcons } from '../../components';
 import myFoto from '../../assets/img/myFoto.jpg';
+import './About.scss';
 
 const About = () => {
-
   const { i18n } = useTranslation();
   const locale = i18n.language;
-
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {

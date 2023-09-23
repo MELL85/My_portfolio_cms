@@ -2,40 +2,81 @@
     "header": {
         "hello": "Hello",
         "name": "I am Yevhen, Front End Developer",
-        "description": "I create an efficient UI mobile or web design also UX research to make sure that I get what people needs and strategy for interaction design.",
         "download": "Download CV"
     },
-    "about": {
-
-    },
-    "workExp": {
-
-    },
-    "counter": {
-
-    },
     "services": {
-
+        "headTitle": "Services",
+        "title": "Working with mutual respect and trust"
     },
     "works": {
-
+        "headTitle": "My",
+        "headTitleStrong": "Works"
     },
     "testimonials": {
-
+        "headTitle": "My Clients",
+        "appealTitle": "Let’s work together",
+        "appealText": "The key to building long term relationships is trust. I take the responsbility of being your development partner seriously. My design agreement gives you peace of mind that your intellectual property is safe guarded.",
+        "appealBtn": "Hire Me",
+        "item1": {
+            "feedback": "Excellent after-sales service, responds quickly to doubts, helps in solving problems and the source code is very good. Congratulations!!!",
+            "name": "John Doe"
+        },
+        "item2": {
+            "feedback": "He fixed the security problems. Thank you very much!",
+            "name": "Jim Doe"
+        },
+        "item3": {
+            "feedback": "The services are high quality, excellent code, and easy to use. Thanks!",
+            "name": "Keyt S."
+        },
+        "item4": {
+            "feedback": "Very good for the purpose, just wish i could have more options but still a good service.",
+            "name": "Jack Rork"
+        },
+        "item5": {
+            "feedback": "Your customer service support response is swift and friendly. I appreciate your timely response.",
+            "name": "Jerry B."
+        },
+        "item6": {
+            "feedback": "The design it's very awesome and simple, im totally new on react but it is easy to understand.",
+            "name": "Denzel F."
+        },
+        "item7": {
+            "feedback": "This is the best React.js development for admin dashbaord",
+            "name": "Rita S."
+        },
+        "item8": {
+            "feedback": "Very well coded, took me a while to understand it but now this is my go to template for every project.",
+            "name": "Jacqueline Dow"
+        }
     },
     "footer": {
-
+        "headTitle": "Contact",
+        "headTitleSpan": "Me.",
+        "placeholderText": "What is your name? *",
+        "placeholderMail": "What it your email? *",
+        "placeholderMessage": "Write your message here",
+        "formBtnSending": "Sending",
+        "formBtn": "Send Message",
+        "message": "Thank you for",
+        "message2": "getting in touch!"
     },
     "navDetail": {
-
+        "btn": "Download CV",
+        "contact": "My personal contact"
     },
     "menuOpen": {
-
+        "about": "about",
+        "services": "services",
+        "work": "work",
+        "testimonials": "testimonials",
+        "contact": "contact"
     },
     "navbarLeft": {
-
+        "skills": "skills"
     },
     "navTranslate": {
-
+        "dark": "dark",
+        "light": "light"
     }
 }

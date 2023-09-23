@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { IoIosMail, IoIosConstruct } from 'react-icons/io';
 import { RiMessage2Fill } from 'react-icons/ri';
@@ -14,6 +15,8 @@ import './NavbarLeft.scss';
 
 
 const Navbar = () => {
+const { t } = useTranslation();
+
     return (
         <nav className="app__navbarLeft">
             <div className="app__navbarLeft-logo">
@@ -21,12 +24,12 @@ const Navbar = () => {
             </div>
             <ul className='app__navbarLeft-links-block'>
                 {[
-                    [<IoPersonCircleOutline />, 'about'],
-                    [<IoIosConstruct />, 'services'],
-                    [<BsFillGrid3X3GapFill />, 'work'],
-                    [<GiSkills />, 'skills'],
-                    [<RiMessage2Fill />, 'testimonials'],
-                    [<IoIosMail />, 'contact']
+                    [<IoPersonCircleOutline />, t('menuOpen.about')],
+                    [<IoIosConstruct />, t('menuOpen.services')],
+                    [<BsFillGrid3X3GapFill />, t('menuOpen.work')],
+                    [<GiSkills />, t('navbarLeft.skills')],
+                    [<RiMessage2Fill />, t('menuOpen.testimonials')],
+                    [<IoIosMail />, t('menuOpen.contact')]
                 ].map((item) => (
  
                     <li className='app__flex app__navbarLeft-links' key={`link-${item}`} >

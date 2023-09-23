@@ -9,6 +9,11 @@ export default {
             type: 'string'
         },
         {
+            name: 'nameUa',
+            title: 'NameUa',
+            type: 'string'
+        },
+        {
             name: 'company',
             title: 'Company',
             type: 'string'
@@ -31,15 +36,5 @@ export default {
             title: 'FeedbackUa',
             type: 'string'
         },
-        {
-            name: 'country',
-            title: 'Country',
-            type: 'string'
-        },
-        // {
-        //     name: 'location',
-        //     title: 'Testimonial Location',
-        //     type: 'geopoint',
-        // },
     ]
 }

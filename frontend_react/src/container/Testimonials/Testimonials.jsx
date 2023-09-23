@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
-
-import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { useTranslation } from 'react-i18next';
 import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
+import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import images from '../../constants/images';
 import './Testimonials.scss';
 
 const Testimonials = () => {
+  const {t, i18n } = useTranslation();
+  const locale = i18n.language;
 
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,7 +35,7 @@ const Testimonials = () => {
     <div className="container">
       <div className="testimonials__head-block">
         <div className="testimonials__head-title-block">
-          <h4 className="testimonials__head-title">My Clients</h4>
+          <h4 className="testimonials__head-title">{t('testimonials.headTitle')}</h4>
         </div>
 
         <div className="testimonials__main-block">
@@ -53,8 +55,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">Excellent after-sales service, responds quickly to doubts, helps in solving problems and the source code is very good. Congratulations !!!</p>
-                  <h4 className="testimonials__list-item-name"> John Doe</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item1.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item1.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -69,8 +71,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">He fixed the security problems . Thank you very much!</p>
-                  <h4 className="testimonials__list-item-name">Jim Doe </h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item2.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item2.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -85,8 +87,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">The services are high quality, excellent code, and easy to use. Thanks!</p>
-                  <h4 className="testimonials__list-item-name">Keyt S.</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item3.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item3.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -101,8 +103,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">Very good for the purpose, just wish i could have more options but still a good service.</p>
-                  <h4 className="testimonials__list-item-name">Jack Rork</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item4.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item4.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -117,8 +119,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">Your customer service support response is swift and friendly. I appreciate your timely response.</p>
-                  <h4 className="testimonials__list-item-name">Jerry B.</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item5.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item5.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -133,8 +135,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">The design it's very awesome and simple, im totally new on react but it is easy to understand.</p>
-                  <h4 className="testimonials__list-item-name">Denzel F.</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item6.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item6.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -149,8 +151,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">This is the best react js development for admin dashbaord</p>
-                  <h4 className="testimonials__list-item-name">Rita S.</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item7.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item7.name')}</h4>
                 </Tooltip>
               </div>
 
@@ -165,8 +167,8 @@ const Testimonials = () => {
                   arrowColor="#fff"
                   className="experience-tooltip"
                 >
-                  <p className="testimonials__list-item-feedback">Very well coded, took me a while to understand it but now this is my go to template for every project.</p>
-                  <h4 className="testimonials__list-item-name">Jacqueline Dow</h4>
+                  <p className="testimonials__list-item-feedback">{t('testimonials.item8.feedback')}</p>
+                  <h4 className="testimonials__list-item-name">{t('testimonials.item8.name')}</h4>
                 </Tooltip>
               </div>
             </div>
@@ -179,9 +181,9 @@ const Testimonials = () => {
                 <div className="testimonial__carousel-item app__flex">
                   <img src={urlFor(test.imageurl)} alt="testimonial" />
                   <div className="testimonial__carousel-content">
-                    <p>{test.feedbackEn}</p>
+                    <p>{locale === 'en' ? test.feedbackEn : test.feedbackUa}</p>
                     <div>
-                      <h4 className="testimonials__carousel-title">{test.name}</h4>
+                      <h4 className="testimonials__carousel-title">{locale === 'en' ? test.name : test.nameUa}</h4>
                       <h5 className="testimonials__carousel-title">{test.company}</h5>
                     </div>
                   </div>
@@ -205,18 +207,18 @@ const Testimonials = () => {
               whileInView={{ x: [-100, 0], opacity: [0, 1] }}
               transition={{ duration: 0.7 }}
             >
-              <h3 className="appeal__title">Let’s work together</h3>
+              <h3 className="appeal__title">{t('testimonials.appealTitle')}</h3>
             </motion.div>
 
             <motion.div
               whileInView={{ scale: [0, 1], opacity: [0, 1] }}
               transition={{ duration: 1, ease: 'easeInOut' }}
             >
-              <p className="appeal__text">The key to building long term relationships is trust. I take the responsbility of being your development partner seriously. My design agreement gives you peace of mind that your intellectual property is safe guarded.</p>
+              <p className="appeal__text">{t('testimonials.appealText')}</p>
             </motion.div>
 
             <div className="contact-me__btn-block">
-              <a href="#contact" className="contact-me__btn">Hire Me</a>
+              <a href="#contact" className="contact-me__btn">{t('testimonials.appealBtn')}</a>
             </div>
           </div>
         </div>

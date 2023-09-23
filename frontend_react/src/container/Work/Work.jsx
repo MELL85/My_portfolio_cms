@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-
+import { useTranslation } from 'react-i18next';
 import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 
 const Work = () => {
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language;
 
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
@@ -43,7 +45,7 @@ const Work = () => {
     <div className="container">
       <div className="work__wrapper">
         <div className="work__head-title-block">
-          <h4 className="work__head-title">My <strong>Works</strong></h4>
+          <h4 className="work__head-title">{t('works.headTitle')} <strong>{t('works.headTitleStrong')}</strong></h4>
         </div>
 
         <div className="work__filter">
@@ -97,9 +99,9 @@ const Work = () => {
               </div>
 
               <div className="work__content app_flex">
-                <h4 className="work__content-title">{work.title}</h4>
-                <p className="work__content-text" style={{ marginTop: 10 }}>{work.description}</p>
-
+                <h4 className="work__content-title">{locale === 'en' ? work.title : work.titleUA}</h4>
+                <p className="work__content-text" style={{ marginTop: 10 }}>{locale === 'en' ? work.description : work.descriptionUA}</p>
+ 
                 <div className="work__tag app_flex">
                   <p className="work__tag-item">{work.tags[0]}</p>
                 </div>

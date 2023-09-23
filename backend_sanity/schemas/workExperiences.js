@@ -9,6 +9,11 @@ export default {
             type: 'string'
         },
         {
+            name: 'nameUA',
+            title: 'nameUA',
+            type: 'string'
+        },
+        {
             name: 'company',
             title: 'Company',
             type: 'string'
@@ -16,6 +21,11 @@ export default {
         {
             name: 'desc',
             title: 'Desc',
+            type: 'string'
+        },
+        {
+            name: 'descUA',
+            title: 'DescUA',
             type: 'string'
         }
     ]

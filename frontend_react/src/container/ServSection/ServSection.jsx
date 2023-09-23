@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
-
+import { useTranslation } from 'react-i18next';
 import { urlFor, client } from '../../client';
 import { AppWrap, MotionWrap } from '../../wrapper';
+import { ThemeContext } from '../../providers/ThemeProvider';
 
- 
 import './ServSection.scss';
 
 const ServSection = () => {
- 
+  const { t, i18n } = useTranslation();
+  const locale = i18n.language;
+  const [theme] = useContext(ThemeContext);
   const [services, setServices] = useState([]);
 
   useEffect(() => {
@@ -21,8 +23,8 @@ const ServSection = () => {
   return (
     <div className="container" >
       <div className="services__head-title-block">
-        <h4 className="services__head-title">Services</h4>
-        <p className="services__title-text">Working with mutual respect and trust</p>
+        <h4 className="services__head-title">{t('services.headTitle')}</h4>
+        <p className="services__title-text">{t('services.title')}</p>
       </div>
 
       <div className="services__block">
@@ -40,8 +42,8 @@ const ServSection = () => {
                   <img src={urlFor(service.imgUrl)} alt={service.title} />
                 </div>
                 <div className="services__info-block">
-                  <h6 className="services__title" >{service.title}</h6>
-                  <p className="services__text" >{service.description}</p>
+                  <h6 className="services__title" >{locale === 'en' ? service.title : service.titleUA}</h6>
+                  <p className="services__text" >{locale === 'en' ? service.description : service.descriptionUA}</p>
                 </div>
               </div>
             </div>

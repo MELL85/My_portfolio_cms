@@ -1,6 +1,6 @@
-import React from 'react'
-
-import {NavDetail} from '../../components';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { NavDetail } from '../../components';
 
 import './MenuOpen.scss';
 
@@ -21,7 +21,7 @@ import './MenuOpen.scss';
 
 
 const MenuOpen = (props) => {
-
+    const { t } = useTranslation();
     const classActive = props.active ? 'active' : null;
 
     return (
@@ -33,11 +33,11 @@ const MenuOpen = (props) => {
                             <p className="nav__text-media">explore</p>
                         </div>
                         <ul className="nav__list">
-                            {['about', 'services', 'work', 'testimonials', 'contact'].map((item) => (
+                            {[t('menuOpen.about'), t('menuOpen.services'), t('menuOpen.work'), t('menuOpen.testimonials'), t('menuOpen.contact')].map((item) => (
                                 <li key={`link-${item}`} className="nav__list-item">
                                     <a href={`#${item}`} className="nav__list-item-link" >{item}</a>
                                 </li>
-                            ))} 
+                            ))}
                         </ul>
                     </div>
 
