@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { client } from '../../client';
 
 import './ExperienceItemList.scss';
- 
+  
 const ExperienceItemList = () => {
-    const { i18n } = useTranslation();
+    const { t ,i18n } = useTranslation();
     const locale = i18n.language;
     const [experience, setExperience] = useState([]);
 
@@ -22,7 +22,7 @@ const ExperienceItemList = () => {
         <div className="experience__wrapper">
             <div className="experience__line"></div>
             <div className="experience__list-block">
-                <h5 className="experience__title">WORK <span>EXPERIENCE</span></h5>
+                <h5 className="experience__title">{t('worksExp.title')}<span>{t('worksExp.titleSpan')}</span></h5>
                 <ul className="experience__list">
                     <motion.div>
                         {experience.map((experience) => (

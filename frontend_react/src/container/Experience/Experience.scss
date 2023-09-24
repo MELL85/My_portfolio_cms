@@ -6,7 +6,8 @@
 
     @media screen and (min-width: 992px) {
         margin: 120px 0 0;
-        padding: 40px 16px 0;
+        // padding: 40px 16px 0;
+        padding: 40px 0 40px;
     }
 }
 
@@ -64,9 +65,20 @@
         text-transform: uppercase;
         transform: rotate(270deg);
         opacity: .4;
+        color: $text-color;
 
         span {
             opacity: .3;
+        }
+    }
+}
+
+.experience__empty-text.light {
+    @media screen and (min-width: 1300px) {
+        color: $test-bg;
+
+        span {
+            color: $test-bg;
         }
     }
 }

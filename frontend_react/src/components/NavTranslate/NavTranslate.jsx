@@ -43,7 +43,7 @@ const NavTranslate = (props) => {
     const { t, i18n } = useTranslation();
 
     return (
-        <div className={`translate ${classActive}`}>
+        <div className={`translate ${classActive} ${theme === 'dark' ? 'dark' : 'light'}`}>
             <div className="container">
                 <div className="translate__head-block app__flex">
                     <div className="translate__main-block">

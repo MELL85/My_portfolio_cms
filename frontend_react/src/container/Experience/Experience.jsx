@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import { dataCounter } from '../../constants/dataList';
 import { AppWrap } from '../../wrapper';
 import { ExperienceItemList, ExperienceCounterList, Skills } from '../../components';
@@ -7,6 +7,8 @@ import { ExperienceItemList, ExperienceCounterList, Skills } from '../../compone
 import './Experience.scss';
 
 const Experience = () => {
+  const [theme] = useContext(ThemeContext);
+
   return (
     <div className="container">
       <div className="experience__block">
@@ -15,7 +17,7 @@ const Experience = () => {
           <div className="experience__empty-wrapper">
             <div className="experience__empty-line"></div>
             <div className="experience__empty-block">
-              <h3 className="experience__empty-text">M<span>elnyk</span>Y<span>evhen</span></h3>
+              <h3 className={`experience__empty-text ${theme === 'dark' ? 'dark' : 'light'}`}>M<span>elnyk</span>Y<span>evhen</span></h3>
             </div>
           </div>
 
@@ -31,3 +33,8 @@ const Experience = () => {
 }
 
 export default AppWrap(Experience, 'experience');
+// export default AppWrap(
+//   MotionWrap(Experience, 'App-experience'), 
+//   'experience',
+//   "app__whitebg"
+//   );

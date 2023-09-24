@@ -4,6 +4,13 @@
         "name": "Я Євген, Front End Developer",
         "download": "Завантаж CV"
     },
+    "worksExp": {
+        "title": "Досвід",
+        "titleSpan": "роботи"
+    },
+    "skills": {
+        "skills": "навички"
+    },
     "services": {
         "headTitle": "Послуги",
         "title": "Працювати у атмосфері взаємної поваги та довіри"

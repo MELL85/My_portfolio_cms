@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import { NavDetail } from "../../components";
-import { AppWrap, MotionWrap } from "../../wrapper";
+import { AppWrap} from "../../wrapper";
 import { client } from '../../client';
 
 import logo from '../../assets/logo/my_logo_2.png';
@@ -9,11 +10,10 @@ import './Footer.scss';
 
 const Footer = () => {
   const { t } = useTranslation();
-
+  const [ theme ] = useContext(ThemeContext);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {!isFormSubmitted ?
 
-            <div className="form__head-block">
+            <div className={`form__head-block ${theme === 'dark' ? 'dark' : 'light'}`}>
               <div className="form__head-title-block">
                 <h3 className="form__head-title">{t('footer.headTitle')}<br /> <span>{t('footer.headTitleSpan')}</span></h3>
               </div>
@@ -55,21 +55,21 @@ const Footer = () => {
                   <div className="form__item">
                     <input
                       type="text"
-                      className="form__item-name"
+                      className={`form__item-name ${theme === 'dark' ? 'dark' : 'light'}`}
                       placeholder={t('footer.placeholderText')}
                       name="name" value={name}
                       onChange={handleChangeInput}
                       required />
                     <input
                       type="mail"
-                      className="form__item-mail"
+                      className={`form__item-mail ${theme === 'dark' ? 'dark' : 'light'}`}
                       name="email" value={email}
                       placeholder={t('footer.placeholderMail')}
                       onChange={handleChangeInput}
                       required />
                     <textarea
                       type="text"
-                      className="form__item-message"
+                      className={`form__item-message ${theme === 'dark' ? 'dark' : 'light'}`}
                       name="message"
                       value={message}
                       placeholder={t('footer.placeholderMessage')}

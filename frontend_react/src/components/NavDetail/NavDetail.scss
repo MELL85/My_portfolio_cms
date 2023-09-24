@@ -34,10 +34,20 @@
     color: $text-color;
     letter-spacing: 1px;
 
-
     @media screen and (min-width: 992px) {
         font-size: 24px;
     }
+}
+
+.nav__logo-descr.light,
+.nav__logo-name.light,
+.nav__contact-item.light {
+    color: $test-bg;
+
+    span {
+        color: $test-bg;
+    }
+
 }
 
 .nav__cv-link {
@@ -59,6 +69,16 @@
     }
 }
 
+.nav__cv-link.light {
+    color: $main-color-bg-light2;
+
+    &:hover {
+        color: $main-color;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+    }
+}
+
 .nav__social {
     margin: 24px 0;
 }
@@ -69,6 +89,12 @@
     svg {
         font-size: 24px;
         color: $text-color;
+    }
+}
+
+.nav__icon.light {
+    svg {
+        color: $test-bg;
     }
 }
 

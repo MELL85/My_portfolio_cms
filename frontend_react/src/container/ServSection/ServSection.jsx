@@ -27,7 +27,7 @@ const ServSection = () => {
         <p className="services__title-text">{t('services.title')}</p>
       </div>
 
-      <div className="services__block">
+      <div className="services__block"> 
         {services.map((service, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -36,14 +36,14 @@ const ServSection = () => {
             className="services__item-head-block"
             key={service.title + index}
           >
-            <div className="services__item-block">
+            <div className={`services__item-block ${theme === 'dark' ? 'dark' : 'light'}`}>
               <div className="services__hover-block">
                 <div className="services__img-block">
                   <img src={urlFor(service.imgUrl)} alt={service.title} />
                 </div>
                 <div className="services__info-block">
-                  <h6 className="services__title" >{locale === 'en' ? service.title : service.titleUA}</h6>
-                  <p className="services__text" >{locale === 'en' ? service.description : service.descriptionUA}</p>
+                  <h6 className={`services__title ${theme === 'dark' ? 'dark' : 'light'}`} >{locale === 'en' ? service.title : service.titleUA}</h6>
+                  <p className={`services__text ${theme === 'dark' ? 'dark' : 'light'}`} >{locale === 'en' ? service.description : service.descriptionUA}</p>
                 </div>
               </div>
             </div>

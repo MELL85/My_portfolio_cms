@@ -63,117 +63,128 @@
     -webkit-text-fill-color: transparent;
 }
 
-.form {
-    &__head-block {
-        background-color: $services-item-bg;
-        opacity: 0.9;
-        border-radius: 20px;
-        padding: 32px 16px;
-        margin: 8px 0 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+.form__head-block {
+    background-color: $services-item-bg;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding: 32px 16px;
+    margin: 8px 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-        @media screen and (min-width: 992px) {
-            margin-top: 0;
-            padding: 72px 16px;
-        }
+    @media screen and (min-width: 992px) {
+        margin-top: 0;
+        padding: 72px 16px;
     }
+}
 
-    &__head-title-block {
-        padding: 0 15px;
+.form__head-block.light {
+    background: rgba(170, 170, 170, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.form__head-title-block {
+    padding: 0 15px;
+}
+
+.form__head-title {
+    font-size: 28px;
+    color: $text-color;
+
+    @media screen and (min-width: 992px) {
+        font-size: 38px;
     }
+}
 
-    &__head-title {
-        font-size: 28px;
-        color: $text-color;
+.form__head-title>span {
+    color: $secondary-main-color;
+}
 
-        @media screen and (min-width: 992px) {
-            font-size: 38px;
-        }
-    }
+.form__block {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
 
-    &__head-title>span {
-        color: $secondary-main-color;
-    }
+.form__item-name {
+    background-color: $services-item-bg;
+    margin: 16px 0;
+    border: transparent;
+    font-size: 16px;
+    border-bottom: 1px solid $contact-line;
+    padding: 16px 0 8px;
+    cursor: text;
+    width: 100%;
+}
 
-    &__block {
-        padding: 0 15px;
-        display: flex;
-        flex-direction: column;
-    }
+.form__item>input:hover {
+    border: 1px solid $accent-color;
+}
 
-    &__item-name {
-        background-color: $services-item-bg;
-        margin: 16px 0;
-        border: transparent;
+.form__item>textarea:hover {
+    border: 1px solid $accent-color;
+}
+
+.form__item-mail {
+    background-color: $services-item-bg;
+    margin: 16px 0;
+    font-size: 16px;
+    border: transparent;
+    border-bottom: 1px solid $contact-line;
+    padding: 16px 0 8px;
+    cursor: text;
+    width: 100%;
+}
+
+.form__item-message {
+    background-color: $services-item-bg;
+    margin: 16px 0;
+    border: transparent;
+    font-size: 16px;
+    border-bottom: 1px solid $contact-line;
+    padding: 16px 0 8px;
+    cursor: text;
+    resize: none;
+    width: 100%;
+    min-height: 140px;
+}
+
+.form__item-message.light,
+.form__item-mail.light,
+.form__item-name.light {
+    background: transparent;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.3);
+}
+
+.form__btn-block {
+    margin: 16px 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__btn-block>button {
+    padding: 10px 36px;
+    border-radius: 10px;
+    background: $secondary-main-color-gradient;
+    color: $main-color;
+    border: $secondary-main-color;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+
+    &:hover {
+        box-shadow: 3px 3px 8px 1px $main-color;
         font-size: 16px;
-        border-bottom: 1px solid $contact-line;
-        padding: 16px 0 8px;
-        cursor: text;
-        width: 100%;
+        transform: scale(1.05);
+
     }
-
-    &__item>input:hover {
-        border: 1px solid $accent-color;
-    }
-
-    &__item>textarea:hover {
-        border: 1px solid $accent-color;
-    }
-
-    &__item-mail {
-        background-color: $services-item-bg;
-        margin: 16px 0;
-        font-size: 16px;
-        border: transparent;
-        border-bottom: 1px solid $contact-line;
-        padding: 16px 0 8px;
-        cursor: text;
-        width: 100%;
-    }
-
-    &__item-message {
-        background-color: $services-item-bg;
-        margin: 16px 0;
-        border: transparent;
-        font-size: 16px;
-        border-bottom: 1px solid $contact-line;
-        padding: 16px 0 8px;
-        cursor: text;
-        resize: none;
-        width: 100%;
-        min-height: 140px;
-    }
-
-    &__btn-block {
-        margin: 16px 0 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__btn-block>button {
-        padding: 10px 36px;
-        border-radius: 10px;
-        background: $secondary-main-color-gradient;
-        color: $main-color;
-        border: $secondary-main-color;
-        font-size: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all .3s ease;
-
-        &:hover {
-            box-shadow: 3px 3px 8px 1px $main-color;
-            font-size: 16px;
-            transform: scale(1.05);
-
-        }
-    }
-
-
 }
 
 .navDetail__wrapper {

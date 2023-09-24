@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
@@ -12,7 +13,7 @@ import './Testimonials.scss';
 const Testimonials = () => {
   const {t, i18n } = useTranslation();
   const locale = i18n.language;
-
+  const [ theme ] = useContext(ThemeContext);
   const [testimonials, setTestimonials] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,9 +34,9 @@ const Testimonials = () => {
 
   return (
     <div className="container">
-      <div className="testimonials__head-block">
+      <div className={`testimonials__head-block ${theme === 'dark' ? 'dark' : 'light'}`}>
         <div className="testimonials__head-title-block">
-          <h4 className="testimonials__head-title">{t('testimonials.headTitle')}</h4>
+          <h4 className={`testimonials__head-title ${theme === 'dark' ? 'dark' : 'light'}`}>{t('testimonials.headTitle')}</h4>
         </div>
 
         <div className="testimonials__main-block">
@@ -214,11 +215,11 @@ const Testimonials = () => {
               whileInView={{ scale: [0, 1], opacity: [0, 1] }}
               transition={{ duration: 1, ease: 'easeInOut' }}
             >
-              <p className="appeal__text">{t('testimonials.appealText')}</p>
+              <p className={`appeal__text ${theme === 'dark' ? 'dark' : 'light'}`}>{t('testimonials.appealText')}</p>
             </motion.div>
 
             <div className="contact-me__btn-block">
-              <a href="#contact" className="contact-me__btn">{t('testimonials.appealBtn')}</a>
+              <a href="#contact" className={`contact-me__btn ${theme === 'dark' ? 'dark' : 'light'}`}>{t('testimonials.appealBtn')}</a>
             </div>
           </div>
         </div>

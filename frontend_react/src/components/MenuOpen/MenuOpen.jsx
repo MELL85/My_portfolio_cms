@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import { NavDetail } from '../../components';
 
 import './MenuOpen.scss';
@@ -23,9 +24,10 @@ import './MenuOpen.scss';
 const MenuOpen = (props) => {
     const { t } = useTranslation();
     const classActive = props.active ? 'active' : null;
+    const [theme] = useContext(ThemeContext);
 
     return (
-        <section className={`nav ${classActive}`}>
+        <section className={`nav ${classActive} ${theme === 'dark' ? 'dark' : 'light'}`}>
             <div className="container" >
                 <div className="nav__head-block">
                     <div className="nav__list-head-block">
@@ -35,7 +37,7 @@ const MenuOpen = (props) => {
                         <ul className="nav__list">
                             {[t('menuOpen.about'), t('menuOpen.services'), t('menuOpen.work'), t('menuOpen.testimonials'), t('menuOpen.contact')].map((item) => (
                                 <li key={`link-${item}`} className="nav__list-item">
-                                    <a href={`#${item}`} className="nav__list-item-link" >{item}</a>
+                                    <a href={`#${item}`} className={`nav__list-item-link ${theme === 'dark' ? 'dark' : 'light'}`} >{item}</a>
                                 </li>
                             ))}
                         </ul>

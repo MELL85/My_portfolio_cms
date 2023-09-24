@@ -6,13 +6,18 @@
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     position: fixed;
-    // position: sticky;
     top: 0;
     width: 100%;
     z-index: 10000;
     display: flex;
     transition: all .3s ease-in-out;
-    // flex-direction: row;
+}
+
+.App-navbar.light {
+    background: $main-color-bg-light;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .nav__menu {
@@ -43,6 +48,12 @@
     }
 }
 
+.nav__btn-menu.light {
+    &:hover {
+        box-shadow: 0px 0px 20px $test-bg;
+    }
+}
+
 .nav__btn-menu.active {
     border-radius: 50%;
 }
@@ -56,6 +67,10 @@
     height: 2px;
     border-color: $main-color;
     transition: all 0.5s ease-in-out;
+}
+
+.nav__btn-menu-line.light {
+    border-color: $test-bg;
 }
 
 .nav__btn-menu.active .nav__btn-menu-line {
@@ -73,6 +88,14 @@
     background-color: $main-color;
     transform: scale(1);
     transition: all 0.5s ease-in-out;
+}
+
+.nav__btn-menu.light::after {
+    background-color: $test-bg;
+}
+
+.nav__btn-menu.light::before {
+    background-color: $test-bg;
 }
 
 .nav__btn-menu.active::after {
@@ -116,6 +139,14 @@
     svg {
         font-size: 24px;
         color: $main-color;
+    }
+}
+
+.nav__setting-btn.light {
+    background-color: rgba(255, 255, 255, 0.25);
+
+    svg {
+        color: $test-bg;
     }
 }
 

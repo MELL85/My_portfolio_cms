@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { AiFillEye, AiFillGithub } from 'react-icons/ai';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import './Work.scss';
 
 const Work = () => {
   const { t, i18n } = useTranslation();
   const locale = i18n.language;
-
+  const [ theme ] =useContext(ThemeContext);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
@@ -53,7 +54,7 @@ const Work = () => {
             <div
               key={index}
               onClick={() => handleWorkFilter(item)}
-              className={`work__filter-item app__flex ${activeFilter === item ? 'item-active' : ''}`}
+              className={`work__filter-item app__flex ${activeFilter === item ? 'item-active' : ''} ${theme === 'dark' ? 'dark' : 'light'}`}
             >
               {item}
             </div>
@@ -66,14 +67,14 @@ const Work = () => {
           className="work__portfolio"
         >
           {filterWork.map((work, index) => (
-            <div className="work__item app__flex" key={index} >
+            <div className={`work__item app__flex ${theme === 'dark' ? 'dark' : 'light'}`} key={index} >
               <div className="work__img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
  
                 <motion.div
                   whileHover={{ opacity: [0, 1] }}
                   transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
-                  className="work__hover app__flex"
+                  className={`work__hover app__flex ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <a href={work.projectLink} target="_blank" rel="norefern" >
                     <motion.div
@@ -102,7 +103,7 @@ const Work = () => {
                 <h4 className="work__content-title">{locale === 'en' ? work.title : work.titleUA}</h4>
                 <p className="work__content-text" style={{ marginTop: 10 }}>{locale === 'en' ? work.description : work.descriptionUA}</p>
  
-                <div className="work__tag app_flex">
+                <div className={`work__tag app_flex ${theme === 'dark' ? 'dark' : 'light'}`}>
                   <p className="work__tag-item">{work.tags[0]}</p>
                 </div>
               </div>

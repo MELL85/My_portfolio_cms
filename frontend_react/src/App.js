@@ -13,7 +13,7 @@ function App() {
       <Suspense fallbackLng="...loading" >
         <div className="App">
           {/* <div className='gradient__bg'> */}
-          <div className="App-navbar">
+          <div>
             <Navbar />
           </div>
           <header className="App-header" id="home">

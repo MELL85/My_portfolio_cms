@@ -4,6 +4,13 @@
         "name": "I am Yevhen, Front End Developer",
         "download": "Download CV"
     },
+    "worksExp": {
+        "title": "Work",
+        "titleSpan": "EXPERIENCE"
+    },
+    "skills": {
+        "skills": "skills"
+    },
     "services": {
         "headTitle": "Services",
         "title": "Working with mutual respect and trust"

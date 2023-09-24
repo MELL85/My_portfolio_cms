@@ -28,6 +28,14 @@
     }
 }
 
+.nav.light {
+    background: $main-color-bg-light2;
+    // opacity: 0.9;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .nav__head-block {
     display: flex;
     flex-direction: column;
@@ -76,6 +84,12 @@
     }
 }
 
+.nav__list-item-link.light {
+    color: $test-bg;
+    &:hover {
+        color: $accent-color;
+    }
+}
 
 .nav__text-media-block {
     display: none;
