@@ -7,11 +7,10 @@ import { Navbar } from './components';
 import './App.scss';
 
 function App() {
-
   return (
     <ThemeProvider>
       <Suspense fallbackLng="...loading" >
-        <div className="App">
+        <div className="App" >
           {/* <div className='gradient__bg'> */}
           <div>
             <Navbar />

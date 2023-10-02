@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../providers/ThemeProvider';
 import ExperienceCounter from '../ExperienceCounter/ExperienceCounter';
 
 import './ExperienceCounterList.scss';
@@ -16,9 +16,11 @@ const ExperienceCounterList = ({ dataCounter }) => {
 
     })
 
+    const [ theme ] = useContext(ThemeContext);
+
     return (
         <div className="counter">
-            <div className="counter__item-block">
+            <div className={`counter__item-block ${theme === 'dark' ? 'dark' : 'light'}`}>
                 {elements}
             </div>
         </div>

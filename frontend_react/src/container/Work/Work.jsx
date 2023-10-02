@@ -10,7 +10,7 @@ import './Work.scss';
 const Work = () => {
   const { t, i18n } = useTranslation();
   const locale = i18n.language;
-  const [ theme ] =useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
@@ -70,7 +70,7 @@ const Work = () => {
             <div className={`work__item app__flex ${theme === 'dark' ? 'dark' : 'light'}`} key={index} >
               <div className="work__img app__flex">
                 <img src={urlFor(work.imgUrl)} alt={work.name} />
- 
+
                 <motion.div
                   whileHover={{ opacity: [0, 1] }}
                   transition={{ duration: 0.25, ease: 'easeInOut', staggerChildren: 0.5 }}
@@ -86,6 +86,7 @@ const Work = () => {
                       <AiFillEye />
                     </motion.div>
                   </a>
+
                   <a href={work.codeLink} target="_blank" rel="norefern" >
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
@@ -102,7 +103,7 @@ const Work = () => {
               <div className="work__content app_flex">
                 <h4 className="work__content-title">{locale === 'en' ? work.title : work.titleUA}</h4>
                 <p className="work__content-text" style={{ marginTop: 10 }}>{locale === 'en' ? work.description : work.descriptionUA}</p>
- 
+
                 <div className={`work__tag app_flex ${theme === 'dark' ? 'dark' : 'light'}`}>
                   <p className="work__tag-item">{work.tags[0]}</p>
                 </div>

@@ -8,7 +8,7 @@
         "title": "Досвід",
         "titleSpan": "роботи"
     },
-    "skills": {
+    "skills": { 
         "skills": "навички"
     },
     "services": {
@@ -60,9 +60,9 @@
     "footer": {
         "headTitle": "Зв'яжіться",
         "headTitleSpan": "зі мною.",
-        "placeholderText": "Як тебе звати? *",
-        "placeholderMail": "Яка твоя електронна пошта? *",
-        "placeholderMessage": "Напиши своє повідомлення тут",
+        "placeholderText": " Як тебе звати? *",
+        "placeholderMail": " Яка твоя електронна пошта? *",
+        "placeholderMessage": " Напиши своє повідомлення тут",
         "formBtnSending": "Відправлення",
         "formBtn": "Надіслати",
         "message": "Дякую, що",

@@ -65,10 +65,10 @@
         border-radius: 50%;
         object-fit: cover;
         background: transparent;
-        opacity: 0.7;
+        filter: grayscale(100);
 
         &:hover {
-            opacity: 1;
+            filter: grayscale(0);
         }
     }
 
@@ -76,14 +76,11 @@
 
         width: 20px;
         height: 20px;
-
-        // color: $main-color;
         border: none;
         background: transparent;
         cursor: pointer;
 
         &:hover {
-            // color: $secondary-main-color;
             transform: scale(1.1);
         }
 
@@ -98,6 +95,10 @@
     span {
         color: $main-color;
         padding: 0 5px;
+    }
+
+    button.active img {
+        filter: grayscale(0);
     }
 }
 
@@ -146,4 +147,30 @@
     background: $main-color;
     opacity: 0.9;
     transition-duration: .3s;
+}
+
+.iconMoon {
+    position: absolute;
+    left: 37%;
+
+    @media screen and (min-width: 1200px) {
+        left: 39%;
+    }
+
+    @media screen and (min-width:1600px) {
+        left: 37%;
+    }
+}
+
+.iconSun {
+    position: absolute;
+    left: 53%;
+
+    @media screen and (min-width: 1200px) {
+        left: 52%;
+    }
+
+    @media screen and (min-width:1600px) {
+        left: 53%;
+    }
 }

@@ -10,15 +10,6 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   const [toggleTr, setToggleTr] = useState(false);
   const [theme] = useContext(ThemeContext);
-
-  const menuBtn = () => {
-    setActive(active => !active);
-  }
-
-  const toggle = () => {
-    setToggleTr(toggleTr => !toggleTr);
-  }
-
   const classActive = active ? 'active' : null;
   const classActiveTr = toggleTr ? 'toggleTr' : null;
 
@@ -29,12 +20,13 @@ const Navbar = () => {
           <button type="button"
             className={`nav__btn-menu ${classActive} ${theme === 'dark' ? 'dark' : 'light'}`}
             id="burger-menu"
-            onClick={menuBtn}>
+            onClick={() => setActive(!active)}
+          >
             <span className={`nav__btn-menu-line ${theme === 'dark' ? 'dark' : 'light'}`}></span>
           </button>
 
           <div className="nav__logo-block">
-            <a href="#" className="nav__logo-link">
+            <a href="#home" className="nav__logo-link">
               <img src={my_logo_icon_2} alt="my-logo" className="nav__logo" />
             </a>
           </div>
@@ -42,15 +34,21 @@ const Navbar = () => {
           <div className="nav__setting">
             <button type="button"
               className={`nav__setting-btn ${classActiveTr} ${theme === 'dark' ? 'dark' : 'light'}`}
-              onClick={toggle}
+              onClick={() => setToggleTr(!toggleTr)}
             >
               <AiOutlineGlobal />
             </button>
           </div>
         </nav>
 
-        <MenuOpen active={active} />
-        <NavTranslate active={toggleTr} />
+        <MenuOpen
+          active={active}
+          setActive={setActive}
+        />
+        <NavTranslate
+          toggleTr={toggleTr}
+          setToggleTr={setToggleTr}
+        />
 
       </div>
     </div>

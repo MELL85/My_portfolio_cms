@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { client } from '../../client';
 import { ThemeContext } from '../../providers/ThemeProvider';
+import Spline from '@splinetool/react-spline';
 
 import { NavbarLeft, SocialIcons } from '../../components';
 import './Header.scss';
@@ -11,7 +12,7 @@ const Header = () => {
   const { t, i18n } = useTranslation();
   const locale = i18n.language;
   const [abouts, setAbouts] = useState([]);
-  const [ theme ] = useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
 
   useEffect(() => {
     const query = '*[_type == "abouts"]';
@@ -50,16 +51,20 @@ const Header = () => {
                   whileInView={{ scale: [0, 1], opacity: [0, 1] }}
                   transition={{ duration: 1, ease: 'easeInOut' }}
                   key={about.description + index} >
-                  <h5 className={`header__desctop-head-text ${theme === 'dark' ? 'dark' : 'light'}`}>{locale === 'en' ? about.description : about.descriptionUA}</h5>
+                  <h5 className="header__desctop-head-text">{locale === 'en' ? about.description : about.descriptionUA}</h5>
                 </motion.div>
               ))}
 
-              <div className="header__desctop-icon-cv-block">
+              <div className="header__desctop-icon-cv-block" >
                 <a href="#" className={`nav__cv-link ${theme === 'dark' ? 'dark' : 'light'}`}>{t('header.download')}</a>
                 <SocialIcons />
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="header__desctop-bg">
+          <Spline className="header__animation" scene="https://draft.spline.design/HxGOCWevPTuMUdVN/scene.splinecode" />
         </div>
       </div>
     </div>

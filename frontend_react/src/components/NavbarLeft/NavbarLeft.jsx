@@ -34,7 +34,7 @@ const Navbar = () => {
                         <div className="app__navbarLeft-dot" />
                         <a href={`#${item[1]}`} className="app__navbarLeft-link" >
                             {item[0]}
-                            <p className="app__navbarLeft-link-text">{item[1]}</p>
+                            <p className="app__navbarLeft-link-text">{item[1]}</p> 
                         </a>
                     </li>
 

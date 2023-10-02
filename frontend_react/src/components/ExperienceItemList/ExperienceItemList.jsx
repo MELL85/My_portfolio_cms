@@ -54,7 +54,7 @@ const ExperienceItemList = () => {
 
                                             <Tooltip
                                                 id={work.name}
-                                                effect="solid"
+                                                effect="solid" 
                                                 arrowColor="#fff"
                                                 className="experience-tooltip"
                                             >

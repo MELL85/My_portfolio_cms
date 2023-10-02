@@ -60,9 +60,9 @@
     "footer": {
         "headTitle": "Contact",
         "headTitleSpan": "Me.",
-        "placeholderText": "What is your name? *",
-        "placeholderMail": "What it your email? *",
-        "placeholderMessage": "Write your message here",
+        "placeholderText": " What is your name? *",
+        "placeholderMail": " What it your email? *",
+        "placeholderMessage": " Write your message here",
         "formBtnSending": "Sending",
         "formBtn": "Send Message",
         "message": "Thank you for",
