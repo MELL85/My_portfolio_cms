@@ -13,7 +13,7 @@ import './NavbarLeft.scss';
 
 const Navbar = () => {
     const { t } = useTranslation();
-    const [theme] = useContext(ThemeContext);
+    const [theme] = useContext(ThemeContext); 
 
     return (
         <nav className={`app__navbarLeft ${theme === 'dark' ? 'dark' : 'light'}`}>
@@ -32,9 +32,9 @@ const Navbar = () => {
 
                     <li className='app__flex app__navbarLeft-links' key={`link-${item}`} >
                         <div className="app__navbarLeft-dot" />
-                        <a href={`#${item[1]}`} className="app__navbarLeft-link" >
+                        <a href={`#${item[1]}`} className={`app__navbarLeft-link ${theme === 'dark' ? 'dark' : 'light'}`} >
                             {item[0]}
-                            <p className="app__navbarLeft-link-text">{item[1]}</p> 
+                            <p className={`app__navbarLeft-link-text ${theme === 'dark' ? 'dark' : 'light'}`}>{item[1]}</p> 
                         </a>
                     </li>
 

@@ -11,7 +11,6 @@ function App() {
     <ThemeProvider>
       <Suspense fallbackLng="...loading" >
         <div className="App" >
-          {/* <div className='gradient__bg'> */}
           <div>
             <Navbar />
           </div>
@@ -38,7 +37,6 @@ function App() {
           <footer className="App-footer" id="contact">
             <Footer />
           </footer>
-          {/* </div> */}
         </div>
       </Suspense>
     </ThemeProvider>

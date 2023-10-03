@@ -1,9 +1,5 @@
 @import '../../variables.scss';
 
-// .App-about-me {
-//     margin: -1px 0 0;
-// }
-
 .about-me__head-block {
     display: flex;
     flex-direction: column;
@@ -90,29 +86,29 @@
 }
 
 
-.about-me__desctop-line-block {
-    display: flex;
-    border: 2px solid;
-    border-image-source: linear-gradient(135deg, #f5cf02, #d39400);
-    margin: -200px 0 0;
-    border-image-slice: 1;
-    border-top: 0;
-    border-left: 0;
-    animation: line 2s ease-in-out forwards;
-    display: none;
-}
+// .about-me__desctop-line-block {
+//     display: flex;
+//     border: 2px solid;
+//     border-image-source: linear-gradient(135deg, #f5cf02, #d39400);
+//     margin: -200px 0 0;
+//     border-image-slice: 1;
+//     border-top: 0;
+//     border-left: 0;
+//     animation: line 2s ease-in-out forwards;
+//     display: none;
+// }
 
 
-@keyframes line {
-    from {
-        height: 0;
-        width: 0;
-        transform: scaleX(0);
-    }
+// @keyframes line {
+//     from {
+//         height: 0;
+//         width: 0;
+//         transform: scaleX(0);
+//     }
 
-    to {
-        height: 50px;
-        width: calc(100% - 250px);
-        transform: scaleX(100%);
-    }
-}
+//     to {
+//         height: 50px;
+//         width: calc(100% - 250px);
+//         transform: scaleX(100%);
+//     }
+// }

@@ -95,6 +95,15 @@
     }
 }
 
+.app__navbarLeft-link.light {
+    color: $test-bg;
+
+    &:hover {
+        background: $test-light-dark-bg;
+        color: $test-bg;
+    }
+}
+
 .app__navbarLeft-link-text {
     display: none;
     padding: 0 0 0 5px;
@@ -102,4 +111,10 @@
     color: $text-color;
     text-transform: uppercase;
     font-weight: 500;
+    white-space: nowrap;
+}
+
+.app__navbarLeft-link-text.light {
+    background: $test-light-dark-bg;
+    color: $test-bg;
 }
