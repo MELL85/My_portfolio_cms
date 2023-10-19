@@ -40,7 +40,7 @@ const Testimonials = () => {
         </div>
 
         <div className="testimonials__main-block">
-
+ 
           <div className="testimonials__map-block">
             <img src={images.worldMap} alt="worldMap" className="testimonials__map-img" />
 
@@ -179,17 +179,17 @@ const Testimonials = () => {
           <div className="testimonials__carousel-block">
             {testimonials.length && (
               <>
-                <div className="testimonial__carousel-item app__flex">
+                <div className={`testimonial__carousel-item app__flex ${theme === 'dark' ? 'dark' : 'light'}`}>
                   <img src={urlFor(test.imageurl)} alt="testimonial" />
                   <div className="testimonial__carousel-content">
-                    <p>{locale === 'en' ? test.feedbackEn : test.feedbackUa}</p>
+                    <p className={`testimonials__carousel-text ${theme === 'dark' ? 'dark' : 'light'}`}>{locale === 'en' ? test.feedbackEn : test.feedbackUa}</p>
                     <div>
-                      <h4 className="testimonials__carousel-title">{locale === 'en' ? test.name : test.nameUa}</h4>
-                      <h5 className="testimonials__carousel-title">{test.company}</h5>
+                      <h4 className={`testimonials__carousel-title ${theme === 'dark' ? 'dark' : 'light'}`}>{locale === 'en' ? test.name : test.nameUa}</h4>
+                      <h5 className={`testimonials__carousel-title ${theme === 'dark' ? 'dark' : 'light'}`}>{test.company}</h5>
                     </div>
                   </div>
                 </div>
-
+ 
                 <div className="testimonials__btns app__flex">
                   <div className="app__flex" onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}>
                     <HiChevronLeft />

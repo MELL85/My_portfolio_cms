@@ -19,13 +19,40 @@ const About = () => {
       .then((data) => setAbouts(data))
   }, [])
 
+
+  useEffect(() => {
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function handleScroll() {
+      const frame = document.querySelector('.frame');
+      if (isInViewport(frame)) {
+        frame.classList.add('active');
+        window.removeEventListener('scroll', handleScroll);
+      } else {
+        frame.classList.remove('active');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="container">
       <div className="about-me__head-block">
         <div className="about-me__card">
           <figure>
             <img src={myFoto} alt="" className="about-me__img" />
-            <span className="about-me__frame"></span>
+            <div className="about-me__frame">
+              <span className="frame"></span>
+            </div>
           </figure>
         </div>
         <div className="about-me__title-block">

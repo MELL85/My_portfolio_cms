@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../providers/ThemeProvider';
-import { dataCounter } from '../../constants/dataList';
 import { AppWrap } from '../../wrapper';
 import { ExperienceItemList, ExperienceCounterList, Skills } from '../../components';
 
@@ -25,7 +24,7 @@ const Experience = () => {
           <div className="experience__block-progress-list"><Skills /></div>
 
         </div>
-        <div className="experience__block-counter-list"> <ExperienceCounterList dataCounter={dataCounter} /></div>
+        <div className="experience__block-counter-list"> <ExperienceCounterList /></div>
       </div>
 
     </div>

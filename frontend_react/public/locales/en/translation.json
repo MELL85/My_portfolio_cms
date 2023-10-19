@@ -11,6 +11,17 @@
     "skills": {
         "skills": "skills"
     },
+    "counter": {
+        "item1": {
+            "text": "Completed Project"
+        },
+        "item2": {
+            "text": "Working Hour"
+        },
+        "item3": {
+            "text": "Happy Clients"
+        }
+    },
     "services": {
         "headTitle": "Services",
         "title": "Working with mutual respect and trust"
@@ -30,7 +41,7 @@
         },
         "item2": {
             "feedback": "He fixed the security problems. Thank you very much!",
-            "name": "Jim Doe"
+            "name": "Jim Doe" 
         },
         "item3": {
             "feedback": "The services are high quality, excellent code, and easy to use. Thanks!",
