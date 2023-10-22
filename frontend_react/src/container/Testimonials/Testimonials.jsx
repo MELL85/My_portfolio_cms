@@ -54,7 +54,7 @@ const Testimonials = () => {
                   id={1}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item1.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item1.name')}</h4>
@@ -70,7 +70,7 @@ const Testimonials = () => {
                   id={2}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item2.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item2.name')}</h4>
@@ -86,7 +86,7 @@ const Testimonials = () => {
                   id={3}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item3.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item3.name')}</h4>
@@ -102,7 +102,7 @@ const Testimonials = () => {
                   id={4}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item4.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item4.name')}</h4>
@@ -118,7 +118,7 @@ const Testimonials = () => {
                   id={5}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item5.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item5.name')}</h4>
@@ -134,7 +134,7 @@ const Testimonials = () => {
                   id={6}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item6.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item6.name')}</h4>
@@ -150,7 +150,7 @@ const Testimonials = () => {
                   id={7}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item7.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item7.name')}</h4>
@@ -166,7 +166,7 @@ const Testimonials = () => {
                   id={8}
                   effect="solid"
                   arrowColor="#fff"
-                  className="experience-tooltip"
+                  className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                 >
                   <p className="testimonials__list-item-feedback">{t('testimonials.item8.feedback')}</p>
                   <h4 className="testimonials__list-item-name">{t('testimonials.item8.name')}</h4>

@@ -28,11 +28,15 @@
         top: -3%;
     }
 
+    @media screen and (min-width:1200px) {
+        right: 12%;
+    }
+
     @media screen and (min-width: 1300px) {
         margin-top: 0;
         position: absolute;
-        right: 15%;
-        top: -3%;
+        right: 14%;
+        top: -5%;
     }
 }
 
@@ -40,7 +44,6 @@
     width: 205px;
     height: auto;
     border-radius: 20px;
-    // filter: grayscale(100%);
 
     @media screen and (min-width: 992px) {
         width: 250px;
@@ -51,62 +54,56 @@
     position: relative;
     top: -300px;
     left: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 185px;
     height: 310px;
-    // border: 2px solid;
-    // border-radius: 20px;
-    // border-color: $main-color;
-    // background-color: transparent;
-
-    // border-image-source: linear-gradient(to right, transparent 0%, $main-color 100%);
-    // border-image-slice: 1;
-    // border-image-width: 2px;
-    // border-image-outset: 0;
-    // border-image-repeat: stretch;
-    // border-color: transparent;
-    // border-style: solid;
-    // transition: border 1.5s;
-
-    // border-color: linear-gradient(120deg, $menuOpen-btn-color, $baner-color) border-box;
-    // background: linear-gradient(120deg, $menuOpen-btn-color, $baner-color) border-box;
 
     @media screen and (min-width: 992px) {
         width: 225px;
-        height: 343px;
-        top: -318px;
+        height: 380px;
+        top: -360px;
         left: 12px;
+    }
+
+    @media screen and (min-width: 1300px) {
+        left: 5%;
+        top: 5%;
+        position: absolute;
     }
 }
 
 .frame {
     width: 100%;
     height: 100%;
-    border: 2px solid transparent;
     box-sizing: border-box;
     border-radius: 20px;
     position: relative;
     display: block;
 
-    overflow: hidden; 
-    border-color: transparent; 
-    transition: border-color 1.5s; 
+    overflow: hidden;
 }
 
-.frame.active {
-    border-color: $main-color;
+@keyframes frame {
+    0% {
+        border-bottom: 2px solid transparent;
+        border-top: 2px solid transparent;
+        width: 0%;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        height: 0%;
+    }
+
+    100% {
+        border-bottom: 2px solid $main-color;
+        border-top: 2px solid $main-color;
+        width: 100%;
+        border-left: 2px solid $main-color;
+        border-right: 2px solid $main-color;
+        height: 100%;
+    }
 }
-
-// @keyframes draw {
-//     0% {
-//         border-color: transparent;
-//     }
-
-//     100% {
-//         border-color: $main-color;
-//     }
-// }
-
 
 .about-me__title-block {
     max-width: 90%;
@@ -120,33 +117,5 @@
     font-size: 18px;
     font-weight: 400;
     letter-spacing: .5px;
-    margin-top: -210px;
+    margin-top: -240px;
 }
-
-
-// .about-me__desctop-line-block {
-//     display: flex;
-//     border: 2px solid;
-//     border-image-source: linear-gradient(135deg, #f5cf02, #d39400);
-//     margin: -200px 0 0;
-//     border-image-slice: 1;
-//     border-top: 0;
-//     border-left: 0;
-//     animation: line 2s ease-in-out forwards;
-//     display: none;
-// }
-
-
-// @keyframes line {
-//     from {
-//         height: 0;
-//         width: 0;
-//         transform: scaleX(0);
-//     }
-
-//     to {
-//         height: 50px;
-//         width: calc(100% - 250px);
-//         transform: scaleX(100%);
-//     }
-// }

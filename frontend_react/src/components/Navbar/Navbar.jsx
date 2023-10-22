@@ -16,39 +16,44 @@ const Navbar = () => {
   return (
     <div className={`App-navbar ${theme === 'dark' ? 'dark' : 'light'}`}>
       <div className="container">
-        <nav className="nav__menu">
-          <button type="button"
-            className={`nav__btn-menu ${classActive} ${theme === 'dark' ? 'dark' : 'light'}`}
-            id="burger-menu"
-            onClick={() => setActive(!active)}
-          >
-            <span className={`nav__btn-menu-line ${theme === 'dark' ? 'dark' : 'light'}`}></span>
-          </button>
 
-          <div className="nav__logo-block">
-            <a href="#home" className="nav__logo-link">
-              <img src={my_logo_icon_2} alt="my-logo" className="nav__logo" />
-            </a>
+        <div className="navbar__wrapper">
+          <div className="nav__menu-wrapper">
+            <nav className="nav__menu">
+              <button type="button"
+                className={`nav__btn-menu ${classActive} ${theme === 'dark' ? 'dark' : 'light'}`}
+                id="burger-menu"
+                onClick={() => setActive(!active)}
+              >
+                <span className={`nav__btn-menu-line ${theme === 'dark' ? 'dark' : 'light'}`}></span>
+              </button>
+
+              <div className="nav__logo-block">
+                <a href="#home" className="nav__logo-link">
+                  <img src={my_logo_icon_2} alt="my-logo" className="nav__logo" />
+                </a>
+              </div>
+
+              <div className="nav__setting">
+                <button type="button"
+                  className={`nav__setting-btn ${classActiveTr} ${theme === 'dark' ? 'dark' : 'light'}`}
+                  onClick={() => setToggleTr(!toggleTr)}
+                >
+                  <AiOutlineGlobal />
+                </button>
+              </div>
+            </nav>
           </div>
 
-          <div className="nav__setting">
-            <button type="button"
-              className={`nav__setting-btn ${classActiveTr} ${theme === 'dark' ? 'dark' : 'light'}`}
-              onClick={() => setToggleTr(!toggleTr)}
-            >
-              <AiOutlineGlobal />
-            </button>
-          </div>
-        </nav>
-
-        <MenuOpen
-          active={active}
-          setActive={setActive}
-        />
-        <NavTranslate
-          toggleTr={toggleTr}
-          setToggleTr={setToggleTr}
-        />
+          <MenuOpen
+            active={active}
+            setActive={setActive}
+          />
+          <NavTranslate
+            toggleTr={toggleTr}
+            setToggleTr={setToggleTr}
+          />
+        </div>
 
       </div>
     </div>

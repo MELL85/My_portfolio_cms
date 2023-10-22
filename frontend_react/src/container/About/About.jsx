@@ -19,31 +19,6 @@ const About = () => {
       .then((data) => setAbouts(data))
   }, [])
 
-
-  useEffect(() => {
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    function handleScroll() {
-      const frame = document.querySelector('.frame');
-      if (isInViewport(frame)) {
-        frame.classList.add('active');
-        window.removeEventListener('scroll', handleScroll);
-      } else {
-        frame.classList.remove('active');
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div className="container">
       <div className="about-me__head-block">
@@ -51,7 +26,12 @@ const About = () => {
           <figure>
             <img src={myFoto} alt="" className="about-me__img" />
             <div className="about-me__frame">
-              <span className="frame"></span>
+              <motion.div
+                whileInView={{ animation: 'frame 1s forwards', borderRadius: '20px'}}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="frame"></span>
+              </motion.div>
             </div>
           </figure>
         </div>
@@ -67,7 +47,6 @@ const About = () => {
 
           <SocialIcons />
         </div>
-        <div className="about-me__desctop-line-block"></div>
       </div>
     </div>
   )

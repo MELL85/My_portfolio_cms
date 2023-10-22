@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../../providers/ThemeProvider';
 import { NavDetail } from '../../components';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
+import { Link } from 'react-scroll';
 
 import './MenuOpen.scss';
 
@@ -12,7 +13,7 @@ const MenuOpen = (props) => {
     const classActive = active ? 'active' : null;
     const [theme] = useContext(ThemeContext);
 
-   
+
 
     const handleClickOutside = () => {
 
@@ -44,12 +45,17 @@ const MenuOpen = (props) => {
                             t('menuOpen.testimonials'),
                             t('menuOpen.contact')].map((item) => (
                                 <li key={`link-${item}`} className="nav__list-item">
-                                    <a href={`#${item}`}
+                                    <Link
+                                        to={item}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-60}
+                                        duration={500}
                                         className={`nav__list-item-link ${theme === 'dark' ? 'dark' : 'light'}`}
                                         onClick={() => setActive(false)}
                                     >
                                         {item}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

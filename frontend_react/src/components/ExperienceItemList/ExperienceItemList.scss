@@ -1,13 +1,18 @@
 @import '../../variables.scss';
 
-.experience__line {
-    @media screen and (min-width: 1300px) {
-        border-bottom: 2px solid $main-color;
-        height: 10%;
-        width: 100%;
-        margin-top: 25px;
-    }
-}
+// .experience__line {
+//     @media screen and (min-width: 1300px) {
+//         border-bottom: 2px solid $main-color;
+//         height: 10%;
+//         width: 100%;
+//         // margin-top: 25px;
+//         margin-top: -29.7px;
+//     }
+
+//     @media screen and (min-width: 1600px) {
+//         margin-top: -29px;
+//     }
+// }
 
 .experience__list-block {
     padding: 0 15px 40px;
@@ -15,17 +20,14 @@
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
 
     @media screen and (min-width: 992px) {
-        padding: 0 32px 40px;
+        padding: 0 32px 40px 0;
     }
 
     @media screen and (min-width: 1300px) {
         padding: 40px 32px 40px 30px;
-        border-left: 2px solid $main-color ;
-        height: 110%;
     }
 }
 
@@ -36,19 +38,25 @@
     color: $main-color;
     letter-spacing: .5px;
     text-transform: uppercase;
+    text-align: center;
 
     span {
         opacity: .5;
     }
 
+    @media screen and (min-width: 540px) {
+        text-align: left;
+        margin: 0 16px 24px;
+    }
+
     @media screen and (min-width: 767px) {
         font-size: 28px;
-        padding: 0 0 0 45px;
     }
 
     @media screen and (min-width: 992px) {
         font-size: 32px;
         padding: 0;
+        margin: 0 16px 24px 0;
     }
 
     @media screen and (min-width: 1300px) {
@@ -59,6 +67,20 @@
 .experience__list {
     display: flex;
     flex-direction: column;
+}
+
+.experience__list>div {
+    @media screen and (min-width: 767px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 
@@ -120,12 +142,20 @@
     text-align: center !important;
     line-height: 1.5 !important;
     opacity: 1 !important;
- 
+  
     @media screen and (min-width: 2000px) {
         font-size: 1.75rem !important;
         max-width: 500px !important;
         line-height: 2 !important;
     }
+}
+
+.experience-tooltip.light {
+    background: rgba(170, 170, 170, 0.24) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border: 1px solid rgba(170, 170, 170, 0.3) !important;
 }
 
 .experience__list-item {

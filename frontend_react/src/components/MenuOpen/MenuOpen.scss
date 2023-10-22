@@ -3,7 +3,8 @@
 .nav {
     background-color: $main-color-bg;
     width: 80vw;
-    height: 100vh;
+    // height: 100vh;
+    height: auto;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -15,6 +16,10 @@
 
     &.active {
         left: 0;
+    }
+
+    @media screen and (min-width: 767px) {
+        height: 100vh;
     }
 
     @media screen and (min-width: 992px) {
@@ -67,20 +72,25 @@
 }
 
 .nav__list {
-    margin: 0 0 16px;
+    // margin: 0 0 16px;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 
 .nav__list-item-link {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
-    padding: 16px;
+    padding: 10px 16px;
     color: $main-color;
     text-transform: uppercase;
 
     &:hover {
         color: $accent-color;
+    }
+
+    @media screen and (min-width: 992px) {
+        font-size: 24px;
     }
 }
 

@@ -7,7 +7,7 @@
     -webkit-backdrop-filter: blur(100px);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 10000;
     display: flex;
     transition: all .3s ease-in-out;

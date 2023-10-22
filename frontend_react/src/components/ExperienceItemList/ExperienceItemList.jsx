@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
 import { useTranslation } from 'react-i18next';
 import { client } from '../../client';
+import { ThemeContext } from '../../providers/ThemeProvider';
 
 import './ExperienceItemList.scss';
-  
+
 const ExperienceItemList = () => {
-    const { t ,i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     const locale = i18n.language;
+    const [theme] = useContext(ThemeContext);
     const [experience, setExperience] = useState([]);
 
     useEffect(() => {
@@ -21,7 +23,12 @@ const ExperienceItemList = () => {
     return (
         <div className="experience__wrapper">
             <div className="experience__line"></div>
-            <div className="experience__list-block">
+
+            <motion.div
+                whileInView={{ height: ['0%', '102%'], borderLeft: '2px solid', borderColor: ['transparent', '#f5cf02'] }}
+                transition={{ duration: 0.8 }}
+                className="experience__list-block">
+
                 <h5 className="experience__title">{t('worksExp.title')}<span>{t('worksExp.titleSpan')}</span></h5>
                 <ul className="experience__list">
                     <motion.div>
@@ -54,9 +61,9 @@ const ExperienceItemList = () => {
 
                                             <Tooltip
                                                 id={work.name}
-                                                effect="solid" 
+                                                effect="solid"
                                                 arrowColor="#fff"
-                                                className="experience-tooltip"
+                                                className={`experience-tooltip ${theme === 'dark' ? 'dark' : 'light'}`}
                                             >
                                                 {locale === 'en' ? work.desc : work.descUA}
                                             </Tooltip>
@@ -67,7 +74,9 @@ const ExperienceItemList = () => {
                         ))}
                     </motion.div>
                 </ul>
-            </div>
+
+            </motion.div>
+
         </div>
     )
 }

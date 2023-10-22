@@ -10,7 +10,7 @@
 .footer__block {
     @media screen and (min-width: 992px) {
         display: flex;
-        flex: 1;
+        // flex: 1;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -21,6 +21,12 @@
 
     @media screen and (min-width: 1600px) {
         gap: 200px;
+    }
+} 
+
+.footer__block>div {
+    @media screen and (min-width: 992px) {
+        flex: 1;
     }
 }
 

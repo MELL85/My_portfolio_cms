@@ -64,7 +64,7 @@ const Header = () => {
         </div>
 
         <div className="header__desctop-bg">
-          <Spline className="header__animation" scene="https://draft.spline.design/HxGOCWevPTuMUdVN/scene.splinecode" />
+            <Spline className="header__animation" scene="https://prod.spline.design/9Ma6XHUaHrp4DaFS/scene.splinecode" />
         </div>
       </div>
     </div>
