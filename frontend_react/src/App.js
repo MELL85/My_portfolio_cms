@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { ThemeProvider } from './providers/ThemeProvider';
 
 import { About, Experience, Footer, Header, ServSection, Testimonials, Work } from './container';
-import { Navbar } from './components';
+import { Navbar, Copyright } from './components';
 
 import './App.scss';
 
@@ -37,6 +37,9 @@ function App() {
           <footer className="App-footer" id="contact">
             <Footer />
           </footer>
+          <div>
+            <Copyright />
+          </div>
         </div>
       </Suspense>
     </ThemeProvider>

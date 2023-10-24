@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.copyright__line-block {
+    display: flex;
+    margin: 9px 0 0;
+}
+
+.copyright__line {
+    border-bottom: 1px solid $text-color;
+    width: 100%;
+    color: transparent;
+}
+
+.copyright__title-block {
+    margin: 0 0 15px;
+}
+
+.copyright__title {
+    margin: 15px 0 0;
+    font-size: 14px;
+    text-align: center;
+    color: $text-color;
+}
+
+.copyright__title span {
+    text-transform: capitalize;
+}

@@ -96,5 +96,9 @@
     "navTranslate": {
         "dark": "dark",
         "light": "light"
+    },
+    "copyright": {
+        "name": "melnyk yevhen",
+        "text": "All rights reserved"
     }
 }
