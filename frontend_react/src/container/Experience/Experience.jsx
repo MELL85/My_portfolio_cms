@@ -19,9 +19,8 @@ const Experience = () => {
             </div>
           </div>
 
-            <div className="experience__block-item-list"><ExperienceItemList /></div>
-            <div className="experience__block-progress-list"><Skills /></div>
-
+          <div className="experience__block-item-list"><ExperienceItemList /></div>
+          <div className="experience__block-progress-list"><Skills /></div>
 
         </div>
         <div className="experience__block-counter-list"> <ExperienceCounterList /></div>
@@ -32,8 +31,3 @@ const Experience = () => {
 }
 
 export default AppWrap(Experience, 'experience');
-// export default AppWrap(
-//   MotionWrap(Experience, 'App-experience'), 
-//   'experience',
-//   "app__whitebg"
-//   );

@@ -13,19 +13,13 @@ const MenuOpen = (props) => {
     const classActive = active ? 'active' : null;
     const [theme] = useContext(ThemeContext);
 
-
-
     const handleClickOutside = () => {
-
         console.log('outside');
-
         setActive(false);
     }
 
-    // const ref = useOutsideClick(handleClickOutside);
     const ref = useRef();
     useOutsideClick(ref, () => setActive(false));
-    // useOutsideClick(ref, handleClickOutside);
 
     return (
         <section className={`nav ${classActive} ${theme === 'dark' ? 'dark' : 'light'} `}

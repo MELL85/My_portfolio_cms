@@ -56,7 +56,7 @@ const Header = () => {
               ))}
 
               <div className="header__desctop-icon-cv-block" >
-                <a href="#" className={`nav__cv-link ${theme === 'dark' ? 'dark' : 'light'}`}>{t('header.download')}</a>
+                <a href="/YevhenMelnykResume.pdf" target="_blank" className={`nav__cv-link ${theme === 'dark' ? 'dark' : 'light'}`}>{t('header.download')}</a>
                 <SocialIcons />
               </div>
             </div>

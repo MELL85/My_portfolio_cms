@@ -1,8 +1,6 @@
 @import '../../variables.scss';
 
-
 .App-experience {
-    // padding: 40px 0 0;
     margin: -10px 0 0;
 
     @media screen and (min-width: 540px) {
@@ -11,7 +9,6 @@
 
     @media screen and (min-width: 992px) {
         margin: 120px 0 0;
-        // padding: 40px 16px 0;
         padding: 40px 0 40px;
     }
 

@@ -3,7 +3,6 @@
 .nav {
     background-color: $main-color-bg;
     width: 80vw;
-    // height: 100vh;
     height: auto;
     position: fixed;
     display: flex;
@@ -35,7 +34,6 @@
 
 .nav.light {
     background: $main-color-bg-light2;
-    // opacity: 0.9;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -72,7 +70,6 @@
 }
 
 .nav__list {
-    // margin: 0 0 16px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -96,6 +93,7 @@
 
 .nav__list-item-link.light {
     color: $test-bg;
+
     &:hover {
         color: $accent-color;
     }

@@ -3,9 +3,7 @@
 .App-header {
     margin: -1px 0 0;
     padding: 59px 0 0;
-    // background-color: $text-color;
     background-color: #fff;
-    // color: $text-color;
 
     position: relative;
     z-index: 1;
@@ -16,17 +14,10 @@
     display: flex;
     justify-content: center;
 
-    // background: url(../../assets/img/bg.png);
-    // background: #fff;
-    // background-position: 35% 45%;
-    // background-size: cover;
-
     @media screen and (min-width: 1300px) {
         justify-content: flex-start;
-        // justify-content: space-between;
         height: 525px;
     }
-
 }
 
 .header__desctop-bg {
@@ -92,9 +83,7 @@
 }
 
 .header__banner {
-    // padding: 16px 16px 160px;
     padding: 20px 16px 200px;
-    // width: 80%;
     width: 90%;
 
     position: relative;
@@ -106,9 +95,6 @@
 
     @media screen and (min-width: 1300px) {
         padding: 40px;
-
-
-        // width: 250%;
     }
 }
 
@@ -118,7 +104,6 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    // padding: 40px;
     padding: 20px 30px;
     border-radius: 20px;
 
@@ -139,7 +124,6 @@
         justify-content: start;
         text-align: left;
         align-items: start;
-        // max-width: 950px;
     }
 
     @media screen and (min-width: 1600px) {
@@ -160,7 +144,6 @@
     font-weight: 700;
     margin: 0 0 8px;
 
-    // background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(238, 130, 238, 1) 100%);
     background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(245, 207, 2, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -178,7 +161,6 @@
 .header__text-head-title {
     font-size: 28px;
 
-    // background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(238, 130, 238, 1) 100%);
     background: linear-gradient(90deg, rgba(11, 21, 45, 1) 0%, rgba(245, 207, 2, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;

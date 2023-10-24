@@ -74,7 +74,6 @@ const NavTranslate = (props) => {
 
                     <div className="light__block app__flex">
                         <BsMoonFill className="iconMoon" />
-                        {/* <p>{t('navTranslate.dark')}</p> */}
                         <input
                             id="checkboxInput"
                             type="checkbox"
@@ -83,7 +82,6 @@ const NavTranslate = (props) => {
                         />
                         <label className="toggleSwitch" for="checkboxInput" >
                         </label>
-                        {/* <p>{t('navTranslate.light')}</p> */}
                         <BsSunFill className="iconSun" />
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { urlFor, client } from '../../client';
-import { AppWrap, MotionWrap } from '../../wrapper';
+import { AppWrap } from '../../wrapper';
 import { ThemeContext } from '../../providers/ThemeProvider';
 
 import './ServSection.scss';

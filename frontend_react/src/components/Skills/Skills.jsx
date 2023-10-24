@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { ThemeContext } from '../../providers/ThemeProvider';
-// import { AppWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
 

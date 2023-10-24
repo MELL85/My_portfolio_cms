@@ -22,10 +22,9 @@ const ExperienceItemList = () => {
 
     return (
         <div className="experience__wrapper">
-            <div className="experience__line"></div>
 
-            <motion.div
-                whileInView={{ height: ['0%', '102%'], borderLeft: '2px solid', borderColor: ['transparent', '#f5cf02'] }}
+            <motion.div 
+                whileInView={{animation: "lineBlock 1s forwards"}}
                 transition={{ duration: 0.8 }}
                 className="experience__list-block">
 

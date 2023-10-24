@@ -1,7 +1,6 @@
 @import '../../variables.scss';
 
 .App-footer {
-    // background-color: $main-color-bg;
     padding: 60px 16px 20px;
     margin: -1px 0 0;
     color: #fff;
@@ -10,7 +9,6 @@
 .footer__block {
     @media screen and (min-width: 992px) {
         display: flex;
-        // flex: 1;
         flex-direction: row-reverse;
         justify-content: space-between;
     }
@@ -33,10 +31,8 @@
 .footer {
     &__logo {
         border-radius: 10px;
-        // width: 70px;
         height: 70px;
         margin: 0 0 16px;
-        // filter: contrast(.5);
     }
 
     &__main-block {

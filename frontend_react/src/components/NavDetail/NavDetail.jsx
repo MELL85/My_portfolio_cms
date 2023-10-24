@@ -15,7 +15,13 @@ const NavDetail = () => {
             <div className="nav__name-block">
                 <h3 className={`nav__logo-name ${theme === 'dark' ? 'dark' : 'light'}`}>M<span>elnyk</span> Y<span>evhen</span></h3>
                 <h4 className={`nav__logo-descr ${theme === 'dark' ? 'dark' : 'light'}`}>Front End Developer</h4>
-                <a href="#" className={`nav__cv-link ${theme === 'dark' ? 'dark' : 'light'}`}>{t('navDetail.btn')}</a>
+                <a
+                    href="/YevhenMelnykResume.pdf"
+                    target="_blank"
+                    className={`nav__cv-link ${theme === 'dark' ? 'dark' : 'light'}`}
+                >
+                    {t('navDetail.btn')}
+                </a>
             </div>
 
             <div className="nav__social">
