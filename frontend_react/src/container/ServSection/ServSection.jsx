@@ -20,7 +20,7 @@ const ServSection = () => {
       .then((data) => setServices(data));
   }, []);
 
-  return (
+  return ( 
     <div className="container" >
       <div className="services__head-title-block">
         <h4 className="services__head-title">{t('services.headTitle')}</h4>

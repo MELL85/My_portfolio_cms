@@ -152,7 +152,7 @@
     }
 }
 
-.work__hover {
+.work__hover-block {
     position: absolute;
     top: 0;
     left: 0;
@@ -160,16 +160,23 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background: rgba($color: #000000, $alpha: 0.5);
-
-    border-radius: .5rem;
-    opacity: 0;
+    opacity: 0.6;
     transition: all .3s ease;
+
+    @media screen and (min-width: 1300px) {
+        opacity: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
 
     div {
         width: 50px;
         height: 50px;
         border-radius: 50%;
+
         background: rgba($color: #000000, $alpha: 0.5);
         color: $text-color;
         margin: 1rem;
@@ -185,8 +192,11 @@
     }
 }
 
-.work__hover.light {
-    background: rgba($color: #333333, $alpha: 0.5);
+.work__hover-block.light {
+
+    @media screen and (min-width: 1300px) {
+        background: rgba($color: #333333, $alpha: 0.5);
+    }
 
     div {
         svg {

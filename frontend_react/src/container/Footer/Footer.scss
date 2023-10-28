@@ -180,10 +180,11 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all .3s ease;
+    cursor: pointer;
 
     &:hover {
         box-shadow: 3px 3px 8px 1px $main-color;
-        font-size: 16px;
+        font-size: 15px;
         transform: scale(1.05);
 
     }

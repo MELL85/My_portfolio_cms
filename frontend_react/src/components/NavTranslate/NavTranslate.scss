@@ -64,9 +64,11 @@
         border-radius: 50%;
         object-fit: cover;
         background: transparent;
-        filter: grayscale(100);
+        -webkit-filter: grayscale(0.5);
+        filter: grayscale(0.5);
 
         &:hover {
+            -webkit-filter: grayscale(0);
             filter: grayscale(0);
         }
     }
